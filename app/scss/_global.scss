@@ -1,0 +1,34 @@
+body {
+  @extend %OpenSans-Regular-16;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: $dark-500;
+  background-color: $white;
+}
+
+button,
+input {
+  letter-spacing: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

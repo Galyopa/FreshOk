@@ -1,0 +1,58 @@
+$green900: #63A60F;
+$green200: #E0EDCF;
+$green100: #EFF6E7;
+$dark-900: #121212;
+$dark-800: #31352B;
+$dark-500: #505050;
+$red-900: #CF3E3B;
+$orange-900: #FF7A00;
+$yellow-900: #FFB800;
+$silver-600: #C1C1C1;
+$silver-100: #F6F6F6;
+$white: #FFFFFF;
+
+%background-image-default {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+%ruda-bold-60 {
+  font-family: 'Ruda-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+%ruda-semibold-32 {
+  font-family: 'Ruda-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+%ruda-semibold-30 {
+  font-family: 'Ruda-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+%OpenSans-Regular-14 {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+%OpenSans-Regular-16 {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+%OpenSans-SemiBold {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%OpenSans-Bold-18 {
+  font-family: 'OpenSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}

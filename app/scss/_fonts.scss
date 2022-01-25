@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'OpenSans-Bold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: local('OpenSans-Bold'),
+    url('../fonts/OpenSans_Condensed-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans_Condensed-Bold.woff') format('woff'),
+    url('../fonts/OpenSans_Condensed-Bold.svg#OpenSans_Condensed-Bold') format('svg');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  src: local('OpenSans-SemiBold'),
+    url('../fonts/OpenSans_Condensed-SemiBold.woff2') format('woff2'),
+    url('../fonts/OpenSans_Condensed-SemiBold.woff') format('woff'),
+    url('../fonts/OpenSans_Condensed-SemiBold.svg#OpenSans_Condensed-SemiBold') format('svg');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: local('OpenSans-Regular'),
+    url('../fonts/OpenSans_Condensed-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans_Condensed-Regular.woff') format('woff'),
+    url('../fonts/OpenSans_Condensed-Regular.svg#OpenSans_Condensed-Regular') format('svg');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  src: local('OpenSans-Light'),
+    url('../fonts/OpenSans_Condensed-Light.woff2') format('woff2'),
+    url('../fonts/OpenSans_Condensed-Light.woff') format('woff'),
+    url('../fonts/OpenSans_Condensed-Light.svg#OpenSans_Condensed-Light') format('svg');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Ruda-Black', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  src: local('Ruda-Black'),
+    url('../fonts/Ruda-Black.woff2') format('woff2'),
+    url('../fonts/Ruda-Black.woff') format('woff'),
+    url('../fonts/Ruda-Black.svg#Ruda-Black') format('svg');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-Bold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: local('Ruda-Bold'),
+    url('../fonts/Ruda-Bold.woff2') format('woff2'),
+    url('../fonts/Ruda-Bold.woff') format('woff'),
+    url('../fonts/Ruda-Bold.svg#Ruda-Bold') format('svg');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-SemiBold', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  src: local('Ruda-SemiBold'),
+    url('../fonts/Ruda-SemiBold.woff2') format('woff2'),
+    url('../fonts/Ruda-SemiBold.woff') format('woff'),
+    url('../fonts/Ruda-SemiBold.svg#Ruda-SemiBold') format('svg');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-Regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: local('Ruda-Regular'),
+    url('../fonts/Ruda-Regular.woff2') format('woff2'),
+    url('../fonts/Ruda-Regular.woff') format('woff'),
+    url('../fonts/Ruda-Regular.svg#Ruda-Regular') format('svg');
+  font-display: swap;
+}
+
