@@ -64,7 +64,7 @@
               fill="#31352B" />
           </svg>
           <input class="search-form__input" type="search" placeholder="Найти в магазине ...">
-          <button class="search-form__btn" type="submit">
+          <button class="search-form__btn  form__btn" type="submit">
             поиск
           </button>
         </form>
@@ -133,36 +133,186 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <ul class="advantage">
-        <li class="advantage__item advantage__item--scooter">
-          <h2 class="advantage__title">
-            Бесплатная доставка
-            <span class="advantage__text">
-              Для заказов на сумму от 500 ₽
-            </span>
-          </h2>
-        </li>
-        <li class="advantage__item advantage__item--return">
-          <h2 class="advantage__title">
-            Возврат товара
-            <span class="advantage__text">
-              Если товары были испорчены
-            </span>
-          </h2>
+    <ul class="advantage">
+      <li class="advantage__item advantage__item--scooter">
+        <h2 class="advantage__title">
+          Бесплатная доставка
+          <span class="advantage__text">
+            Для заказов на сумму от 500 ₽
+          </span>
+        </h2>
+      </li>
+      <li class="advantage__item advantage__item--return">
+        <h2 class="advantage__title">
+          Возврат товара
+          <span class="advantage__text">
+            Если товары были испорчены
+          </span>
+        </h2>
 
-        </li>
-        <li class="advantage__item advantage__item--hours">
-          <h2 class="advantage__title">
-            Поддержка 24/7
-            <span class="advantage__text">
-              Лучшие операторы
-            </span>
-          </h2>
-        </li>
-      </ul>
+      </li>
+      <li class="advantage__item advantage__item--hours">
+        <h2 class="advantage__title">
+          Поддержка 24/7
+          <span class="advantage__text">
+            Лучшие операторы
+          </span>
+        </h2>
+      </li>
+    </ul>
+
+    <section class="top-products">
+      <div class="container">
+        <h2 class="title">
+          Топовые товары
+        </h2>
+        <ul class="top-products__menu">
+          <li class="top-products__item">
+            <button type="button" class="top-products__item-btn">
+              Все товары
+            </button>
+          </li>
+          <li class="top-products__item">
+            <button type="button" class="top-products__item-btn">
+              Фрукты
+            </button>
+          </li>
+          <li class="top-products__item">
+            <button type="button" class="top-products__item-btn">
+              ОВОЩИ
+            </button>
+          </li>
+          <li class="top-products__item">
+            <button type="button" class="top-products__item-btn">
+              Напитки
+            </button>
+          </li>
+          <li class="top-products__item">
+            <button type="button" class="top-products__item-btn">
+              БАКАЛЕЯ
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="top-products__inner">
+        <article class="product">
+
+        </article>
+      </div>
+
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="Логотип">
+        </a>
+        <div class="footer-top__inner">
+          <form class="form-subscribe" action="">
+            <label class="form-subscribe-label">
+              Следите за нашими акциями
+              <input class="form-subscribe-input" type="email" placeholder="email@email.com">
+              <button class="form-subscribe-btn form__btn" type="submit">ПОДПИСАТЬСЯ</button>
+            </label>
+          </form>
+          <ul class="footer-top__list">
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">
+                О нас
+              </a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">
+                Контакты
+              </a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">
+                Публичная оферта
+              </a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">
+                Оплата и доставка
+              </a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">
+                Вакансии
+              </a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">
+                Акции
+              </a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">
+                Отзывы
+              </a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">
+                Новости
+              </a>
+            </li>
+          </ul>
+          <address class="address">
+            <ul class="address__list">
+              <li class="address__item">
+                <a class="address__link" href="tel:+7907288365">
+                  Горячая линия +7 907 288 365
+                </a>
+              </li>
+              <li class="address__item">
+                <a class="address__link" href="#">
+                  Санкт-Петербург, ул. Ленина, 1
+                </a>
+              </li>
+            </ul>
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#">
+
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="copyright">&copy; 2021 ФРЕШОК</span>
+        <ul class="payments__list">
+          <li class="payments__item">
+            
+          </li>
+          <li class="payments__item">
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/main.min.js">
   </script>

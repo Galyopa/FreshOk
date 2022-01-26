@@ -33,6 +33,15 @@ button {
   border: 0;
 }
 
+.form__btn {
+  max-width: 160px;
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $white;
+  border-radius: 0 6px 6px 0;
+}
+
 .btn {
   padding: 12px 24px;
   font-size: 18px;
