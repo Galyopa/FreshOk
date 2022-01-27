@@ -48,3 +48,14 @@ button {
   color: $white;
   border-radius: 6px;
 }
+
+.section {
+  padding: 70px 0;
+}
+
+.title {
+  margin-bottom: 30px;
+  @extend %ruda-semibold-32 ;
+  color: $dark-900;
+  text-transform: uppercase;
+}
