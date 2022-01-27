@@ -20,13 +20,8 @@
 	text-transform: uppercase;
 
 	&::before {
-		content: '';
-		position: absolute;
+		@extend %pseudo-element-100vw;
 		z-index: -1;
-		top: 0;
-		left: -35%;
-		bottom: 0;
-		right: -35%;
 		background-color: $dark-800;
 	}
 
@@ -78,13 +73,8 @@
 	padding: 30px 0;
 
 	&::before {
-		content: '';
-		position: absolute;
+		@extend %pseudo-element-100vw;
 		z-index: -1;
-		top: 0;
-		left: -35%;
-		bottom: 0;
-		right: -35%;
 		background-color: $green900;
 	}
 }
@@ -144,6 +134,7 @@
 	}
 
 	&__btn {
+		max-width: 160px;
 		background-color: $dark-800;
 	}
 }
@@ -311,6 +302,123 @@
 	}
 }
 
+.footer {
+	overflow: hidden;
+	background-color: $dark-800;
+	@extend %OpenSans-Regular-14;
+	padding-top: 30px;
+	color: $white;
+}
+
+.footer-top {
+	position: relative;
+
+	&::before {
+		@extend %pseudo-element-100vw;
+		border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: 0.1);
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		padding: 30px 0;
+	}
+
+	&__list {
+		column-count: 3;
+		column-gap: 75px;
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	&__link {}
+}
+
+.form-subscribe {
+	max-width: 310px;
+	width: 100%;
+
+	&__label {
+		margin-bottom: 20px;
+		display: block;
+	}
+
+	&__input {
+		padding: 12px;
+		border-radius: 6px 0 0 6px;
+		max-width: 180px;
+		width: 100%;
+		margin-right: -4px;
+	}
+
+	&__btn {
+		padding: 12px 17px;
+		max-width: 130px;
+		background-color: $green900;
+	}
+}
+
+
+.address {
+
+	&__list {}
+
+	&__item {
+		margin-bottom: 20px;
+	}
+
+	&__link {}
+}
+
+.social {
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		width: 32px;
+		height: 32px;
+		@extend %background-image-default;
+
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 12px;
+	}
+
+	&__link {}
+}
+
+.footer-bottom {
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+
+.copyright {}
+
+.payments {
+
+	&__list {}
+
+	&__item {
+		display: inline-block;
+		width: 93px;
+		height: 29px;
+		@extend %background-image-default;
+	}
+
+	&__item:nth-child(2) {
+		width: 49px;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 25px;
+	}
+}
 
 
 
