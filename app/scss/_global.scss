@@ -55,7 +55,66 @@ button {
 
 .title {
   margin-bottom: 30px;
-  @extend %ruda-semibold-32 ;
+  @extend %ruda-semibold-32;
   color: $dark-900;
   text-transform: uppercase;
+}
+
+.card-product {
+  position: relative;
+  padding: 50px 18px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  background-color: $white;
+  text-align: left;
+  max-width: 300px;
+
+  &__btn-favorite {
+    position: absolute;
+    top: 18px;
+    right: 12px;
+  }
+
+  &__icon-favorite {}
+
+  &__img {}
+
+  &__link {}
+
+  &__title {
+    display: -webkit-box;
+    width: 265px;
+    @extend %OpenSans-SemiBold;
+    color: $dark-900;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+
+
+  }
+
+  &__cart {}
+}
+
+.bage {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  &__new {}
+
+  &__sale {}
+
+  &__hit {}
+}
+
+.price {
+
+  &__old {}
+
+  &__currency {}
+
+  &__current {}
 }

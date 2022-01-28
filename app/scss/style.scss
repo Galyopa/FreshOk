@@ -246,6 +246,11 @@
 	z-index: 3;
 }
 
+.slick-prev svg,
+.slick-next svg {
+	margin: 14px 20px;
+}
+
 .slick-prev {
 	left: 3%;
 }
@@ -305,6 +310,7 @@
 
 .top-products {
 	text-align: center;
+
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -328,7 +334,6 @@
 		font-size: 15px;
 	}
 }
-
 
 .footer {
 	overflow: hidden;
