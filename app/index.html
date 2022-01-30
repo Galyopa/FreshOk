@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
   <title>ФрешОк</title>
+  <link type="image/x-icon" href="images/favicon.png" rel="shortcut icon" sizes="30x32">
+  <link type="image/x-icon" href="images/favicon.png" rel="icon">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -18,12 +20,14 @@
 
         <ul class="header-top__contacts">
           <li class="header-top__contacts-item">
-            <a class="header-top__contacts-link header-top__contacts-link--del" href="#">
+            <a class="header-top__contacts-link header-top__contacts-link--del" href="#"
+              style="		background-image: url('images/icons/icon-del-address.svg');">
               АДРЕС И ВРЕМЯ ДОСТАВКИ
             </a>
           </li>
           <li class="header-top__contacts-item">
-            <a class="header-top__contacts-link header-top__contacts-link--tel" href="#">
+            <a class="header-top__contacts-link header-top__contacts-link--tel" href="#"
+              style="background-image: url('images/icons/icon-tel.svg');">
               ГОРЯЧАЯ ЛИНИЯ 24/7
             </a>
           </li>
@@ -50,7 +54,7 @@
 
       <div class="header-bottom">
         <a class="logo" href="#">
-          <img class="logo__img" src="images/logo.svg" alt="Логотип">
+          <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="60">
         </a>
 
         <button class="catalog-btn" type="button">
@@ -63,7 +67,10 @@
               d="M9.02081 16.4718C4.47604 16.4718 0.778625 12.7772 0.778625 8.23588C0.778625 3.69459 4.47604 0 9.02081 0C13.5656 0 17.263 3.69459 17.263 8.23588C17.263 12.7772 13.5656 16.4718 9.02081 16.4718ZM9.02081 1.5613C5.33761 1.5613 2.34112 4.5555 2.34112 8.23588C2.34112 11.9163 5.33761 14.9105 9.02081 14.9105C12.704 14.9105 15.7005 11.9163 15.7005 8.23588C15.7005 4.5555 12.704 1.5613 9.02081 1.5613ZM20.5498 19.7713C20.8549 19.4665 20.8549 18.9722 20.5498 18.6673L17.0537 15.1739C16.7486 14.869 16.2539 14.869 15.9488 15.1739C15.6438 15.4788 15.6438 15.9731 15.9488 16.2779L19.4449 19.7713C19.5975 19.9238 19.7974 20 19.9974 20C20.1974 20 20.3972 19.9238 20.5498 19.7713Z"
               fill="#31352B" />
           </svg>
-          <input class="search-form__input" type="search" placeholder="Найти в магазине ...">
+          <label class="search-form__label">
+            <input class="search-form__input" required type="search" placeholder="Найти в магазине ..."
+              name="search-form">
+          </label>
           <button class="search-form__btn  form__btn" type="submit">
             поиск
           </button>
@@ -71,16 +78,20 @@
 
         <ul class="user-nav">
           <li class="user-nav__item">
-            <button class="user-nav__btn user-nav__btn--user">
+            <button class="user-nav__btn user-nav__btn--user" type="button"
+              style="background-image: url('images/icons/user-icon.svg'); background-size: 25px 32px;">
+              <span class="sr-only">Личный кабинет</span>
             </button>
           </li>
           <li class="user-nav__item">
-            <button class="user-nav__btn user-nav__btn--favorite">
+            <button class="user-nav__btn" type="button" style="background-image: url('images/icons/favorite.svg');">
+              <span class="sr-only">Избранное</span>
               <span class="user-nav__num">12</span>
             </button>
           </li>
           <li class="user-nav__item">
-            <button class="user-nav__btn user-nav__btn--cart">
+            <button class="user-nav__btn" type="button" style="background-image: url('images/icons/icon-cart.svg')">
+              <span class="sr-only">Корзина</span>
               <span class="user-nav__num">12</span>
             </button>
           </li>
@@ -90,7 +101,7 @@
   <main>
     <section class="hero">
       <div class="slider">
-        <div class="slider__item slider__item--carrot">
+        <div class="slider__item" style="background-image: url('images/slider/carrot.jpg');">
           <div class="container">
             <div class="slider__item-inner">
               <h1 class="slider__title">
@@ -100,12 +111,12 @@
               <p class="slider__text">
                 Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
               </p>
-              <button class="slider__btn btn">Купить сейчас</button>
+              <button class="slider__btn btn" type="button">Купить сейчас</button>
             </div>
           </div>
         </div>
 
-        <div class="slider__item slider__item--tomato">
+        <div class="slider__item" style="background-image: url('images/slider/tomato.jpg');">
           <div class="container">
             <div class="slider__item-inner">
               <h1 class="slider__title">
@@ -115,12 +126,12 @@
               <p class="slider__text">
                 Только с 12 по 15 июля скидка на домашние помидорчики
               </p>
-              <button class="slider__btn btn">Купить сейчас</button>
+              <button class="slider__btn btn" type="button">Купить сейчас</button>
             </div>
           </div>
         </div>
 
-        <div class="slider__item slider__item--greenery">
+        <div class="slider__item" style="background-image: url('images/slider/greenery.jpg');">
           <div class="container">
             <div class="slider__item-inner">
               <h1 class="slider__title">
@@ -128,7 +139,7 @@
                 позеленеют от зависти
                 <span class="slider__title-span">Распродажа зелени</span>
               </h1>
-              <button class="slider__btn btn">Купить сейчас</button>
+              <button class="slider__btn btn" type="button">Купить сейчас</button>
             </div>
           </div>
         </div>
@@ -136,7 +147,7 @@
     </section>
 
     <ul class="advantage">
-      <li class="advantage__item advantage__item--scooter">
+      <li class="advantage__item" style="background-image: url('images/icons/scooter.svg');">
         <h2 class="advantage__title">
           Бесплатная доставка
           <span class="advantage__text">
@@ -144,7 +155,7 @@
           </span>
         </h2>
       </li>
-      <li class="advantage__item advantage__item--return">
+      <li class="advantage__item" style="background-image: url('images/icons/return-box.svg');">
         <h2 class="advantage__title">
           Возврат товара
           <span class="advantage__text">
@@ -153,7 +164,7 @@
         </h2>
 
       </li>
-      <li class="advantage__item advantage__item--hours">
+      <li class="advantage__item" style="background-image: url('images/icons/24-hours.svg');">
         <h2 class="advantage__title">
           Поддержка 24/7
           <span class="advantage__text">
@@ -209,7 +220,7 @@
                 хит
               </span>
             </div>
-            <button class="card-product__btn-favorite">
+            <button class="card-product__btn-favorite" type="button">
               <svg class="card-product__icon-favorite" width="32" height="29" viewBox="0 0 32 29" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -217,7 +228,7 @@
                   fill="#C1C1C1" />
               </svg>
             </button>
-            <img class="card-product__img" src="images/products/pineapple.jpg" alt="Ананас">
+            <img class="card-product__img" src="images/products/pineapple.jpg" alt="Ананас" width="300" height="225">
             <a class="card-product__link" href="#">
               <h3 class="card-product__title">
                 Ананас, 1кг
@@ -237,7 +248,10 @@
                 </span>
               </span>
             </div>
-            <button class="card-product__cart" type="button"></button>
+            <button class="card-product__cart" type="button"
+              style="background-image: url('images/icons/product-icon-cart.svg');">
+              <span class="sr-only">Добавить в корзину</span>
+            </button>
           </article>
           <article class="card-product mix fruit">
             <div class="bage">
@@ -251,7 +265,7 @@
                 хит
               </span>
             </div>
-            <button class="card-product__btn-favorite">
+            <button class="card-product__btn-favorite" type="button">
               <svg class="card-product__icon-favorite" width="32" height="29" viewBox="0 0 32 29" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -259,7 +273,7 @@
                   fill="#C1C1C1" />
               </svg>
             </button>
-            <img class="card-product__img" src="images/products/lemon.jpg" alt="Лимон">
+            <img class="card-product__img" src="images/products/lemon.jpg" alt="Лимон" width="300" height="225">
             <a class="card-product__link" href="#">
               <h3 class="card-product__title">
                 Лимон, 1кг
@@ -279,7 +293,9 @@
                 </span>
               </span>
             </div>
-            <button class="card-product__cart" type="button"></button>
+            <button class="card-product__cart" type="button"
+              style="background-image: url('images/icons/product-icon-cart.svg');">
+              <span class="sr-only">Добавить в корзину</span></button>
           </article>
           <article class="card-product mix fruit">
             <div class="bage">
@@ -293,7 +309,7 @@
                 хит
               </span>
             </div>
-            <button class="card-product__btn-favorite">
+            <button class="card-product__btn-favorite" type="button">
               <svg class="card-product__icon-favorite" width="32" height="29" viewBox="0 0 32 29" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -301,7 +317,8 @@
                   fill="#C1C1C1" />
               </svg>
             </button>
-            <img class="card-product__img" src="images/products/dragon-fruit.jpg" alt="Питахайя">
+            <img class="card-product__img" src="images/products/dragon-fruit.jpg" alt="Питахайя" width="300"
+              height="225">
             <a class="card-product__link" href="#">
               <h3 class="card-product__title">
                 Питахайя красная с белой мякотью, 1шт
@@ -321,7 +338,10 @@
                 </span>
               </span>
             </div>
-            <button class="card-product__cart" type="button"></button>
+            <button class="card-product__cart" type="button"
+              style="background-image: url('images/icons/product-icon-cart.svg');">
+              <span class="sr-only">Добавить в корзину</span>
+            </button>
           </article>
           <article class="card-product mix grocery">
             <div class="bage">
@@ -335,7 +355,7 @@
                 хит
               </span>
             </div>
-            <button class="card-product__btn-favorite">
+            <button class="card-product__btn-favorite" type="button">
               <svg class="card-product__icon-favorite" width="32" height="29" viewBox="0 0 32 29" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -343,7 +363,7 @@
                   fill="#C1C1C1" />
               </svg>
             </button>
-            <img class="card-product__img" src="images/products/ketchup.jpg" alt="Кетчуп">
+            <img class="card-product__img" src="images/products/ketchup.jpg" alt="Кетчуп" width="300" height="225">
             <a class="card-product__link" href="#">
               <h3 class="card-product__title">
                 Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
@@ -363,21 +383,24 @@
                 </span>
               </span>
             </div>
-            <button class="card-product__cart" type="button"></button>
+            <button class="card-product__cart" type="button"
+              style="background-image: url('images/icons/product-icon-cart.svg');">
+              <span class="sr-only">Добавить в корзину</span>
+            </button>
           </article>
           <article class="card-product mix vegetables">
-            <div class="bage">
-              <span class="bage__new">
+            <ul class="bage">
+              <li class="bage__new">
                 новинка
-              </span>
-              <span class="bage__sale">
+              </li>
+              <li class="bage__sale">
                 -50%
-              </span>
-              <span class="bage__hit">
+              </li>
+              <li class="bage__hit">
                 хит
-              </span>
-            </div>
-            <button class="card-product__btn-favorite">
+              </li>
+            </ul>
+            <button class="card-product__btn-favorite" type="button">
               <svg class="card-product__icon-favorite" width="32" height="29" viewBox="0 0 32 29" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -385,7 +408,7 @@
                   fill="#C1C1C1" />
               </svg>
             </button>
-            <img class="card-product__img" src="images/products/carrot.jpg" alt="Морковь">
+            <img class="card-product__img" src="images/products/carrot.jpg" alt="Морковь" width="300" height="225">
             <a class="card-product__link" href="#">
               <h3 class="card-product__title">
                 Морковь молодая с бабушкиной грядки, 1кг
@@ -405,7 +428,10 @@
                 </span>
               </span>
             </div>
-            <button class="card-product__cart" type="button"></button>
+            <button class="card-product__cart" type="button"
+              style="background-image: url('images/icons/product-icon-cart.svg');">
+              <span class="sr-only">Добавить в корзину</span>
+            </button>
           </article>
           <article class="card-product mix beverages">
             <div class="bage">
@@ -419,7 +445,7 @@
                 хит
               </span>
             </div>
-            <button class="card-product__btn-favorite">
+            <button class="card-product__btn-favorite" type="button">
               <svg class="card-product__icon-favorite" width="32" height="29" viewBox="0 0 32 29" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -427,7 +453,7 @@
                   fill="#C1C1C1" />
               </svg>
             </button>
-            <img class="card-product__img" src="images/products/juice.jpg" alt="Сок">
+            <img class="card-product__img" src="images/products/juice.jpg" alt="Сок" width="300" height="225">
             <a class="card-product__link" href="#">
               <h3 class="card-product__title">
                 Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный
@@ -447,7 +473,10 @@
                 </span>
               </span>
             </div>
-            <button class="card-product__cart" type="button"></button>
+            <button class="card-product__cart" type="button"
+              style="background-image: url('images/icons/product-icon-cart.svg');">
+              <span class="sr-only">Добавить в корзину</span>
+            </button>
           </article>
           <article class="card-product mix grocery">
             <div class="bage">
@@ -461,7 +490,7 @@
                 хит
               </span>
             </div>
-            <button class="card-product__btn-favorite">
+            <button class="card-product__btn-favorite" type="button">
               <svg class="card-product__icon-favorite" width="32" height="29" viewBox="0 0 32 29" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -469,7 +498,7 @@
                   fill="#C1C1C1" />
               </svg>
             </button>
-            <img class="card-product__img" src="images/products/coffee.jpg" alt="Кофе">
+            <img class="card-product__img" src="images/products/coffee.jpg" alt="Кофе" width="300" height="225">
             <a class="card-product__link" href="#">
               <h3 class="card-product__title">
                 Кофе с коноплей органический Caffé Salomoni 250г
@@ -489,7 +518,10 @@
                 </span>
               </span>
             </div>
-            <button class="card-product__cart" type="button"></button>
+            <button class="card-product__cart" type="button"
+              style="background-image: url('images/icons/product-icon-cart.svg');">
+              <span class="sr-only">Добавить в корзину</span>
+            </button>
           </article>
           <article class="card-product mix vegetables">
             <div class="bage">
@@ -503,7 +535,7 @@
                 хит
               </span>
             </div>
-            <button class="card-product__btn-favorite">
+            <button class="card-product__btn-favorite" type="button">
               <svg class="card-product__icon-favorite" width="32" height="29" viewBox="0 0 32 29" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -511,7 +543,7 @@
                   fill="#C1C1C1" />
               </svg>
             </button>
-            <img class="card-product__img" src="images/products/paprik.jpg" alt="Перец">
+            <img class="card-product__img" src="images/products/paprik.jpg" alt="Перец" width="300" height="225">
             <a class="card-product__link" href="#">
               <h3 class="card-product__title">
                 Перец оранжевый, 1кг
@@ -531,10 +563,13 @@
                 </span>
               </span>
             </div>
-            <button class="card-product__cart" type="button"></button>
+            <button class="card-product__cart" type="button"
+              style="background-image: url('images/icons/product-icon-cart.svg');">
+              <span class="sr-only">Добавить в корзину</span>
+            </button>
           </article>
         </div>
-        <button class="btn" type="button">Показать еще</button>
+        <button class="top-products__btn btn" type="button">Показать еще</button>
       </div>
 
     </section>
@@ -544,14 +579,15 @@
     <div class="container">
       <div class="footer-top">
         <a class="logo" href="#">
-          <img class="logo__img" src="images/logo.svg" alt="Логотип">
+          <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="60">
         </a>
         <div class="footer-top__inner">
-          <form class="form-subscribe" action="">
-            <label class="form-subscribe__label">
+          <form class="form-subscribe">
+            <label for="email-subscribe" class="form-subscribe__label">
               Следите за нашими акциями
             </label>
-            <input class="form-subscribe__input" type="email" placeholder="email@email.com">
+            <input class="form-subscribe__input" required type="email" placeholder="email@email.com"
+              name="email-subscribe" id="email-subscribe">
             <button class="form-subscribe__btn form__btn" type="submit">ПОДПИСАТЬСЯ</button>
           </form>
           <ul class="footer-top__list">
@@ -612,22 +648,22 @@
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link" href="#" style="background-image: url(images/icons/facebook.svg)">
-
+                  <span class="sr-only">Фейсбук</span>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link" href="#" style="background-image: url(images/icons/youtube.svg)">
-
+                  <span class="sr-only">Ютьюб</span>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link" href="#" style="background-image: url(images/icons/telegram.svg)">
-
+                  <span class="sr-only">Телеграм</span>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link" href="#" style="background-image: url(images/icons/instagram.svg)">
-
+                  <span class="sr-only">Инстаграм</span>
                 </a>
               </li>
             </ul>
@@ -637,9 +673,12 @@
       <div class="footer-bottom">
         <span class="copyright">&copy; 2021 ФРЕШОК</span>
         <ul class="payments__list">
-          <li class="payments__item" style="background-image: url(images/icons/visa.svg)">
+          <span class="sr-only">Принимаем оплаты:</span>
+          <li class="payments__item" style="background-image: url(images/icons/visa.svg); width: 93px; height: 29px;">
+            <span class="sr-only">Виза</span>
           </li>
-          <li class="payments__item" style="background-image: url(images/icons/mastercard.svg)">
+          <li class="payments__item" style="background-image: url(images/icons/mastercard.svg); width: 49px; height: 29px;">
+            <span class="sr-only">Мастеркард</span>
           </li>
         </ul>
       </div>

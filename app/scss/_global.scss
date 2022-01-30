@@ -1,5 +1,7 @@
 body {
-  @extend %OpenSans-Regular-16;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 1.4;
   letter-spacing: 0.03em;
   color: $dark-500;
@@ -25,12 +27,13 @@ button {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
   border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .form__btn {
@@ -47,6 +50,7 @@ button {
   line-height: 1.3;
   color: $white;
   border-radius: 6px;
+  text-transform: uppercase;
 }
 
 .section {
@@ -54,20 +58,24 @@ button {
 }
 
 .title {
-  margin-bottom: 30px;
   @extend %ruda-semibold-32;
+  margin-bottom: 30px;
   color: $dark-900;
   text-transform: uppercase;
 }
 
 .card-product {
   position: relative;
-  padding: 50px 18px 12px;
-  border-radius: 6px;
-  border: 1px solid rgba(17, 17, 17, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 18px;
+  height: 400px;
   background-color: $white;
   text-align: left;
-  max-width: 300px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.2);
 
   &__btn-favorite {
     position: absolute;
@@ -77,42 +85,93 @@ button {
 
   &__icon-favorite {}
 
-  &__img {}
+  &__img {
+    object-fit: contain;
+    object-position: center;
+  }
 
   &__link {}
 
   &__title {
     display: -webkit-box;
-    width: 265px;
-    @extend %OpenSans-SemiBold;
-    color: $dark-900;
+    margin-bottom: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    font-size: 14px;
-
-
+    font-weight: 600;
+    color: $dark-900;
   }
 
-  &__cart {}
+  &__cart {
+    position: absolute;
+    bottom: 18px;
+    right: 25px;
+    width: 32px;
+    height: 32px;
+    background-color: $green900;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    border-radius: 3px;
+  }
+
 }
 
 .bage {
   position: absolute;
   top: 12px;
   left: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: $white;
+  text-transform: uppercase;
 
-  &__new {}
+  &__new,
+  &__sale,
+  &__hit {
+    margin-bottom: 5px;
+    padding: 3px 6px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 10px;
+    border-radius: 6px;
+  }
 
-  &__sale {}
+  &__new {
+    background-color: $green900;
+  }
 
-  &__hit {}
+  &__sale {
+    background-color: $red-900;
+  }
+
+  &__hit {
+    background-color: $orange-900;
+  }
 }
 
 .price {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
 
-  &__old {}
+  &__old {
+    position: relative;
+    color: $silver-600;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid $silver-600;
+    transform: rotate(-15deg);
+  }
 
   &__currency {}
 
