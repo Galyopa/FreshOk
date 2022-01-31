@@ -43,3 +43,16 @@ $white: #FFFFFF;
   font-weight: 600;
   font-size: 30px;
 }
+
+%opacity70 {
+  opacity: 0.7
+}
+
+%focus-links {
+  outline: 3px solid $green200;
+}
+
+%active-links {
+  color: $green200;
+}
+
