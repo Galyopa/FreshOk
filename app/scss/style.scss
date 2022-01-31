@@ -28,7 +28,7 @@
 		display: inline-block;
 
 		&:not(:last-child) {
-			margin-right: 50px;
+			margin-right: 48px;
 		}
 	}
 
@@ -55,7 +55,7 @@
 		display: inline-block;
 
 		&:not(:last-child) {
-			margin-right: 25px;
+			margin-right: 24px;
 		}
 	}
 
@@ -78,7 +78,6 @@
 
 .catalog-btn {
 	position: relative;
-	margin-right: 30px;
 	padding: 15px 40px 15px 60px;
 	font-weight: 600;
 	font-size: 14px;
@@ -111,7 +110,7 @@
 
 .search-form {
 	display: flex;
-	max-width: 580px;
+	max-width: 576px;
 	width: 100%;
 
 	&__svg {
@@ -120,7 +119,7 @@
 	}
 
 	&__label {
-		max-width: 420px;
+		max-width: 419px;
 		width: 100%;
 	}
 
@@ -135,7 +134,7 @@
 	}
 
 	&__btn {
-		max-width: 160px;
+		max-width: 157px;
 		background-color: $dark-800;
 	}
 }
@@ -178,18 +177,18 @@
 	margin-bottom: -26px;
 
 	&__item {
-		padding: 145px 0;
+		padding: 142px 0;
 		@extend %background-image-default;
 	}
 
 	&__item-inner {
-		padding: 25px;
+		padding: 24px;
 		background-color: rgba($color: #FFFFFF, $alpha: 0.8);
 	}
 
 	&__title {
 		width: 63%;
-		font-family: 'Ruda';
+		font-family: 'Ruda', sans-serif;
 		font-weight: 900;
 		font-size: 60px;
 		line-height: 1.3;
@@ -201,7 +200,7 @@
 	}
 
 	&__text {
-		margin-bottom: 30px;
+		margin-bottom: 32px;
 	}
 
 	&__btn {
@@ -242,7 +241,7 @@
 
 	&__item {
 		padding-left: 75px;
-		width: 11%;
+		width: 13%;
 		background-repeat: no-repeat;
 
 		&:nth-child(1) {
@@ -250,7 +249,7 @@
 		}
 
 		&:nth-child(2) {
-			width: 10%;
+			width: 11%;
 			margin-right: 130px;
 		}
 	}
@@ -276,7 +275,7 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 30px;
-		margin-bottom: 50px;
+		margin-bottom: 48px;
 	}
 
 	&__menu {
@@ -340,10 +339,12 @@
 .form-subscribe {
 	max-width: 310px;
 	width: 100%;
+	margin-right: 50px;
 
 	&__label {
 		display: block;
-		margin-bottom: 20px;
+		margin-bottom: 18px;
+		line-height: 1;
 	}
 
 	&__input {
@@ -399,7 +400,7 @@
 	position: relative;
 	display: flex;
 	justify-content: space-between;
-	padding: 30px 0;
+	padding: 24px 0;
 
 	&::before {
 		@extend %pseudo-element-100vw;
