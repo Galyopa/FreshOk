@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -79,11 +80,9 @@ button {
 }
 
 .card-product {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 18px;
+  flex-direction:column;
+  position: relative;
   height: 409px;
   background-color: $white;
   text-align: left;
@@ -91,8 +90,13 @@ button {
   border-radius: 6px;
   border: 1px solid rgba(17, 17, 17, 0.2);
 
+  &:hover {
+    border: 1px solid $green900;
+  }
+
   &__btn-favorite {
     position: absolute;
+    z-index: 3;
     top: 18px;
     right: 12px;
     width: 44px;
@@ -118,16 +122,48 @@ button {
     margin: 9px 6px 6px;
   }
 
+  &__link-img {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 9px;
+  }
+
+  &__link-img:hover::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 48px;
+    height: 48px;
+    background-image: url('../images/icons/icon-search-green.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    background-color: $white;
+    z-index: 1;
+  }
+
+  &__link-img:hover::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
   &__img {
     object-fit: contain;
     object-position: center;
   }
 
-  &__link {}
-
   &__title {
     display: -webkit-box;
-    margin-bottom: 60px;
+    margin: 0 18px;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
@@ -136,10 +172,15 @@ button {
     color: $dark-900;
   }
 
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 18px 18px;
+    margin: auto 0 0 0;
+  }
+
   &__cart {
-    position: absolute;
-    bottom: 18px;
-    right: 25px;
     width: 32px;
     height: 32px;
     background-color: $green900;
@@ -150,16 +191,16 @@ button {
     transition: all 0.3s;
 
     &:hover {
-			background-color: $dark-green;
-		}
+      background-color: $dark-green;
+    }
 
-		&:focus {
-			@extend %focus-links;
-		}
+    &:focus {
+      @extend %focus-links;
+    }
 
-		&:active {
-			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-		}
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
   }
 
 }
@@ -173,6 +214,7 @@ button {
   align-items: flex-start;
   color: $white;
   text-transform: uppercase;
+  z-index: 2;
 
   &__new,
   &__sale,
@@ -199,7 +241,6 @@ button {
 }
 
 .price {
-  position: absolute;
   bottom: 18px;
   left: 20px;
   display: flex;
@@ -208,15 +249,17 @@ button {
   &__old {
     position: relative;
     color: $silver-600;
-  }
 
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 25%;
-    border-bottom: 1px solid $silver-600;
-    transform: rotate(-15deg);
+    &::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 100%;
+      height: 25%;
+      border-bottom: 1px solid $silver-600;
+      transform: rotate(-15deg);
+    }
   }
 
   &__currency {}

@@ -415,6 +415,7 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 15px;
+		border-radius: 3px;
 		transition: all 0.3s;
 
 		&:hover {
@@ -477,6 +478,7 @@
 	&__list {
 		column-count: 3;
 		column-gap: 75px;
+
 	}
 
 	&__item:not(:last-child) {
@@ -548,9 +550,6 @@
 
 
 .address {
-
-	&__list {}
-
 	&__item {
 		margin-bottom: 20px;
 	}
@@ -578,8 +577,6 @@
 	&__list {
 		display: flex;
 	}
-
-	&__item {}
 
 	&__item:not(:last-child) {
 		margin-right: 12px;
@@ -619,12 +616,7 @@
 	}
 }
 
-.copyright {}
-
 .payments {
-
-	&__list {}
-
 	&__item {
 		display: inline-block;
 		@extend %background-image-default;
