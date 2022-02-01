@@ -37,6 +37,7 @@
 		display: flex;
 		align-items: center;
 		border-radius: 3px;
+		fill: $white;
 		transition: all 0.3s;
 
 		&:hover {
@@ -49,13 +50,11 @@
 
 		&:active {
 			@extend %active-links;
+			fill: $green200;
 		}
 
 		&-icon {
 			margin-right: 12px;
-		}
-		&-icon path:active{
-			fill: $green200;
 		}
 	}
 }
@@ -144,6 +143,11 @@
 		height: 4px;
 		background-image: url('../images/icons/arrow_down.svg');
 		@extend %background-image-default;
+		transition: transform 0.3s;
+	}
+
+	&:hover::after {
+		transform: rotate(180deg)
 	}
 
 	&:hover {
@@ -226,7 +230,7 @@
 		transition: all 0.3s;
 
 		&:hover {
-			background-color:rgba($color: $white, $alpha: 0.1);
+			background-color: rgba($color: $white, $alpha: 0.1);
 		}
 
 		&:focus {
@@ -234,7 +238,7 @@
 		}
 
 		&:active {
-			background-color:rgba($color: $white, $alpha: 0.1);
+			background-color: rgba($color: $white, $alpha: 0.1);
 			opacity: 0.5;
 		}
 	}
@@ -287,6 +291,18 @@
 
 	&__btn {
 		background-color: $green900;
+
+		&:hover {
+			background-color: $dark-green;
+		}
+
+		&:focus {
+			@extend %focus-links;
+		}
+
+		&:active {
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
 	}
 }
 
@@ -299,11 +315,8 @@
 	height: 60px;
 	border-radius: 6px;
 	background-color: rgba($color: #FFFFFF, $alpha: 0.8);
-}
-
-.slick-prev svg,
-.slick-next svg {
-	margin: 14px 20px;
+	fill: $dark-500;
+	transition: all 0.3s;
 }
 
 .slick-prev {
@@ -312,6 +325,34 @@
 
 .slick-next {
 	right: 3%;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+	background-color: $green200;
+	fill: $green900;
+}
+
+.slick-prev:focus,
+.slick-next:focus {
+	outline: 3px solid rgba($color: $green900, $alpha: 0.5);
+}
+
+.slick-prev:active,
+.slick-next:active {
+	fill: $green900;
+}
+
+.slick-prev.disabled,
+.slick-next.disabled {
+	fill: $silver-600;
+}
+
+.slick-prev__svg,
+.slick-next__svg {
+	margin: 14px 20px;
+	width: 20px;
+	height: 32px;
 }
 
 .advantage {
@@ -374,11 +415,37 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 15px;
+		transition: all 0.3s;
+
+		&:hover {
+			color: $green900;
+		}
+
+		&:focus {
+			@extend %focus-links;
+		}
+
+		&:active {
+			border-bottom: 3px solid $green200;
+		}
 	}
 
 	&__btn {
 		border: 1px solid $green900;
 		color: $green900;
+		transition: all 0.3s;
+
+		&:hover {
+			background-color: $green100;
+		}
+
+		&:focus {
+			outline: 4px solid rgba($color: $green900, $alpha: 0.5);
+		}
+
+		&:active {
+			box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+		}
 	}
 }
 
@@ -416,7 +483,22 @@
 		margin-bottom: 20px;
 	}
 
-	&__link {}
+	&__link {
+		border-radius: 3px;
+		transition: all 0.3s;
+
+		&:hover {
+			@extend %opacity70;
+		}
+
+		&:focus {
+			@extend %focus-links;
+		}
+
+		&:active {
+			@extend %active-links;
+		}
+	}
 }
 
 .form-subscribe {
@@ -439,11 +521,28 @@
 		border-radius: 6px 0 0 6px;
 	}
 
+	&__input:focus {
+		@extend %focus-links;
+	}
+
 	&__btn {
-		padding: 15px 17px 11px;
+		padding: 15px 17px 12px;
 		max-width: 130px;
 		font-size: 12px;
 		background-color: $green900;
+		transition: all 0.3s;
+
+		&:hover {
+			background-color: $dark-green;
+		}
+
+		&:focus {
+			@extend %focus-links;
+		}
+
+		&:active {
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
 	}
 }
 
@@ -456,7 +555,22 @@
 		margin-bottom: 20px;
 	}
 
-	&__link {}
+	&__link {
+		border-radius: 3px;
+		transition: all 0.3s;
+
+		&:hover {
+			@extend %opacity70;
+		}
+
+		&:focus {
+			@extend %focus-links;
+		}
+
+		&:active {
+			@extend %active-links;
+		}
+	}
 }
 
 .social {
@@ -475,7 +589,20 @@
 		display: inline-block;
 		width: 32px;
 		height: 32px;
-		@extend %background-image-default;
+		border-radius: 3px;
+		fill: $white;
+
+		&:hover {
+			@extend %opacity70;
+		}
+	
+		&:focus {
+			@extend %focus-links;
+		}
+	
+		&:active {
+			fill: $green200;
+		}
 	}
 }
 
