@@ -12,21 +12,6 @@ $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white: #FFFFFF;
 
-%pseudo-element-100vw {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  right: -100%;
-  bottom: 0;
-}
-
-%background-image-default {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 %ruda-bold-60 {
   font-family: 'Ruda', sans-serif;
   font-weight: 700;
@@ -44,16 +29,3 @@ $white: #FFFFFF;
   font-weight: 600;
   font-size: 30px;
 }
-
-%opacity70 {
-  opacity: 0.7
-}
-
-%focus-links {
-  outline: 3px solid $green200;
-}
-
-%active-links {
-  color: $green200;
-}
-

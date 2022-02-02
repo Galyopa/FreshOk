@@ -20,7 +20,12 @@
 	color: $white;
 
 	&::before {
-		@extend %pseudo-element-100vw;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		right: -100%;
+		bottom: 0;
 		z-index: -1;
 		background-color: $dark-800;
 	}
@@ -41,15 +46,11 @@
 		transition: all 0.3s;
 
 		&:hover {
-			@extend %opacity70;
-		}
-
-		&:focus {
-			@extend %focus-links;
+			opacity: 0.7
 		}
 
 		&:active {
-			@extend %active-links;
+			color: $green200;
 			fill: $green200;
 		}
 
@@ -75,15 +76,11 @@
 	}
 
 	&__list-link:hover {
-		@extend %opacity70;
-	}
-
-	&__list-link:focus {
-		@extend %focus-links;
+		opacity: 0.7
 	}
 
 	&__list-link:active {
-		@extend %active-links;
+		color: $green200;
 	}
 }
 
@@ -93,11 +90,7 @@
 }
 
 .logo:hover {
-	@extend %opacity70;
-}
-
-.logo:focus {
-	@extend %focus-links;
+	opacity: 0.7
 }
 
 .header-bottom {
@@ -108,7 +101,12 @@
 	padding: 30px 0;
 
 	&::before {
-		@extend %pseudo-element-100vw;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		right: -100%;
+		bottom: 0;
 		z-index: -1;
 		background-color: $green900;
 	}
@@ -131,7 +129,9 @@
 		width: 25px;
 		height: 17px;
 		background-image: url('../images/icons/nav_icon.svg');
-		@extend %background-image-default;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
 	}
 
 	&::after {
@@ -142,7 +142,9 @@
 		width: 8px;
 		height: 4px;
 		background-image: url('../images/icons/arrow_down.svg');
-		@extend %background-image-default;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
 		transition: transform 0.3s;
 	}
 
@@ -154,9 +156,6 @@
 		background-color: $green200;
 	}
 
-	&:focus {
-		@extend %focus-links;
-	}
 }
 
 .search-form {
@@ -184,10 +183,6 @@
 		color: $dark-800;
 	}
 
-	&__input:focus {
-		@extend %focus-links;
-	}
-
 	&__btn {
 		max-width: 157px;
 		background-color: $dark-800;
@@ -195,10 +190,6 @@
 
 		&:hover {
 			opacity: 0.85;
-		}
-
-		&:focus {
-			@extend %focus-links;
 		}
 
 		&:active {
@@ -233,10 +224,6 @@
 			background-color: rgba($color: $white, $alpha: 0.1);
 		}
 
-		&:focus {
-			@extend %focus-links;
-		}
-
 		&:active {
 			background-color: rgba($color: $white, $alpha: 0.1);
 			opacity: 0.5;
@@ -264,7 +251,9 @@
 
 	&__item {
 		padding: 142px 0;
-		@extend %background-image-default;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
 	}
 
 	&__item-inner {
@@ -294,10 +283,6 @@
 
 		&:hover {
 			background-color: $dark-green;
-		}
-
-		&:focus {
-			@extend %focus-links;
 		}
 
 		&:active {
@@ -422,10 +407,6 @@
 			color: $green900;
 		}
 
-		&:focus {
-			@extend %focus-links;
-		}
-
 		&:active {
 			border-bottom: 3px solid $green200;
 		}
@@ -463,7 +444,12 @@
 	padding-top: 30px;
 
 	&::before {
-		@extend %pseudo-element-100vw;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		right: -100%;
+		bottom: 0;
 		z-index: -1;
 		border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: 0.1);
 		background-color: $dark-800;
@@ -490,20 +476,19 @@
 		transition: all 0.3s;
 
 		&:hover {
-			@extend %opacity70;
-		}
-
-		&:focus {
-			@extend %focus-links;
+			opacity: 0.7
 		}
 
 		&:active {
-			@extend %active-links;
+			color: $green200;
 		}
 	}
 }
 
 .form-subscribe {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
 	max-width: 310px;
 	width: 100%;
 	margin-right: 50px;
@@ -518,17 +503,12 @@
 		padding: 12px;
 		max-width: 180px;
 		width: 100%;
-		margin-right: -4px;
 		line-height: 1;
 		border-radius: 6px 0 0 6px;
 	}
 
-	&__input:focus {
-		@extend %focus-links;
-	}
-
 	&__btn {
-		padding: 15px 17px 12px;
+		padding: 12px 17px;
 		max-width: 130px;
 		font-size: 12px;
 		background-color: $green900;
@@ -536,10 +516,6 @@
 
 		&:hover {
 			background-color: $dark-green;
-		}
-
-		&:focus {
-			@extend %focus-links;
 		}
 
 		&:active {
@@ -559,15 +535,11 @@
 		transition: all 0.3s;
 
 		&:hover {
-			@extend %opacity70;
-		}
-
-		&:focus {
-			@extend %focus-links;
+			opacity: 0.7
 		}
 
 		&:active {
-			@extend %active-links;
+			color: $green200;
 		}
 	}
 }
@@ -590,13 +562,9 @@
 		fill: $white;
 
 		&:hover {
-			@extend %opacity70;
+			opacity: 0.7
 		}
-	
-		&:focus {
-			@extend %focus-links;
-		}
-	
+
 		&:active {
 			fill: $green200;
 		}
@@ -610,7 +578,12 @@
 	padding: 24px 0;
 
 	&::before {
-		@extend %pseudo-element-100vw;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		right: -100%;
+		bottom: 0;
 		z-index: -1;
 		background-color: $dark-800;
 	}
@@ -619,7 +592,9 @@
 .payments {
 	&__item {
 		display: inline-block;
-		@extend %background-image-default;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
 	}
 
 	&__item:nth-child(2) {
