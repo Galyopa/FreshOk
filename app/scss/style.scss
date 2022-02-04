@@ -5,7 +5,6 @@
 @import 'global';
 
 .header {
-	overflow: hidden;
 	flex: 0 0 auto;
 }
 
@@ -112,6 +111,49 @@
 	}
 }
 
+.catalog {
+	position: relative;
+
+	&__list {
+		position: absolute;
+		display: none;
+		width: 100%;
+		z-index: 10;
+		background-color: $white;
+		border-bottom: 1px solid transparent;
+		border-radius: 0 0 6px 6px;
+	}
+
+	&__item {
+		border-bottom: 1px solid rgba($color: $silver-600, $alpha: 0.3);
+	}
+
+	&__item:last-child {
+		border-bottom: 1px solid transparent;
+		border-radius: 0 0 6px 6px;
+	}
+
+	&__link {
+		display: block;
+		padding: 15px 24px;
+		color: #000000;
+
+		&:hover {
+			color: $green900;
+			box-shadow: 3px 0px 0px 0px $green900 inset;
+		}
+
+		&:active {
+			color: $silver-600;
+		}
+	}
+
+}
+
+.catalog:hover .catalog__list {
+	display: block;
+}
+
 .catalog-btn {
 	position: relative;
 	padding: 15px 40px 15px 60px;
@@ -152,10 +194,11 @@
 		transform: rotate(180deg)
 	}
 
-	&:hover {
-		background-color: $green200;
-	}
+}
 
+.catalog:hover .catalog-btn {
+	border-radius: 6px 6px 0 0;
+	background-color: $green200;
 }
 
 .search-form {
@@ -435,7 +478,6 @@
 	flex: 0 0 auto;
 	font-size: 14px;
 	color: $white;
-	overflow: hidden;
 	letter-spacing: normal;
 }
 
