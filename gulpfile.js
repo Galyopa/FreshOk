@@ -6,9 +6,40 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const svgSprite = require('gulp-svg-sprite');
+const cheerio = require('gulp-cheerio');
+const svgmin = require('gulp-svgmin');
 
 function cleanDist() {
   return del('dist')
+}
+
+function svgSprites() {
+  return src('app/images/icons/*.svg')
+    .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    .pipe(cheerio({
+      run: ($) => {
+        $("[fill]").removeAttr("fill"); // очищаем цвет у иконок по умолчанию, чтобы можно было задать свой
+        $("[stroke]").removeAttr("stroke"); // очищаем, если есть лишние атрибуты строк
+        $("[style]").removeAttr("style"); // убираем внутренние стили для иконок
+      },
+      parserOptions: { xmlMode: true },
+    })
+    )
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: '../sprite.svg',
+          },
+        },
+      })
+    )
+    .pipe(dest('app/images'));
 }
 
 function browsersync() {
@@ -66,14 +97,15 @@ function build() {
     'app/**/*.html',
     'app/css/style.min.css',
     'app/js/main.min.js'
-  ], {base: 'app'})
-  .pipe(dest('dist'))
+  ], { base: 'app' })
+    .pipe(dest('dist'))
 }
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload)
+  watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch(['app/images/icons/*.svg'], svgSprites);
 }
 
 exports.styles = styles;
@@ -82,6 +114,7 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.svgSprites = svgSprites;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(svgSprites, styles, scripts, browsersync, watching);
