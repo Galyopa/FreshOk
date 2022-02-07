@@ -6,6 +6,13 @@ $(function () {
     autoplaySpeed: 3000,
   });
 
+  $('.sponsors__list').slick({
+    slidesToShow:5,
+    focusOnSelect: true,
+    centerMode: true,
+    arrows: false,
+  });
+
   $('.catalog-btn').on('click', function () {
     $('.catalog__list').toggleClass('active');
     $(this).toggleClass('active');
