@@ -441,7 +441,6 @@
 	}
 
 	&__link {
-		display: inline-block;
 		margin-bottom: 72px;
 		border: 1px solid $green900;
 		color: $green900;
@@ -470,7 +469,21 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 30px;
+		margin-bottom: 48px;
 	}
+
+	&__link {
+		background-color: $green900;
+
+		&:hover {
+			background-color: $dark-green;
+		}
+
+		&:active {
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+	}
+
 }
 
 .product-banner {
@@ -491,6 +504,7 @@
 
 		&--light {
 			color: $white;
+			text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
 		}
 	}
 
