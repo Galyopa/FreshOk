@@ -309,7 +309,8 @@
 	position: relative;
 
 	&__item {
-		padding: 142px;
+		display: flex !important;
+		align-items: center;
 		min-height: 600px;
 		background-repeat: no-repeat;
 		background-size: cover;

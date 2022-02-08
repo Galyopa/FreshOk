@@ -13,6 +13,7 @@
 
 <body>
   <header class="header">
+    <h1 class="sr-only">Интернет-магазин ФрешОк</h1>
     <div class="container">
       <nav class="nav">
         <div class="nav__top">
@@ -174,15 +175,15 @@
   <main class="main">
 
     <section class="hero">
-      <h1 class="sr-only">Акции магазина:</h1>
+      <h2 class="sr-only">Акции магазина:</h2>
       <div class="banner">
         <div class="banner__item" style="background-image: url('images/slider/carrot.jpg');">
           <div class="container">
             <div class="banner__content">
-              <h2 class="banner__title">
+              <h3 class="banner__title">
                 свежачок вам в хату
                 <span class="banner__subtitle">Скидка -50%</span>
-              </h2>
+              </h3>
               <p class="banner__text">
                 Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
               </p>
@@ -194,10 +195,10 @@
         <div class="banner__item" style="background-image: url('images/slider/tomato.jpg');">
           <div class="container">
             <div class="banner__content">
-              <h2 class="banner__title">
+              <h3 class="banner__title">
                 накрути себе томатов
                 <span class="banner__subtitle">акция: 3 кг по цене 1</span>
-              </h2>
+              </h3>
               <p class="banner__text">
                 Только с 12 по 15 июля скидка на домашние помидорчики
               </p>
@@ -209,10 +210,10 @@
         <div class="banner__item" style="background-image: url('images/slider/greenery.jpg');">
           <div class="container">
             <div class="banner__content">
-              <h2 class="banner__title">
+              <h3 class="banner__title">
                 Пусть остальные позеленеют от зависти
                 <span class="banner__subtitle">Распродажа зелени</span>
-              </h2>
+              </h3>
               <a class="banner__link btn focus" href="#">Купить сейчас</a>
             </div>
           </div>
@@ -677,6 +678,7 @@
                       </span>
                     </div>
                     <div class="rate">
+                      <span class="sr-only">рейтинг товара</span>
                       4.5
                       <svg class="rate__icon">
                         <use xlink:href="images/sprite.svg#star"></use>
@@ -718,6 +720,7 @@
                       </span>
                     </div>
                     <div class="rate">
+                      <span class="sr-only">рейтинг товара</span>
                       4.9
                       <svg class="rate__icon">
                         <use xlink:href="images/sprite.svg#star"></use>
@@ -759,6 +762,7 @@
                       </span>
                     </div>
                     <div class="rate">
+                      <span class="sr-only">рейтинг товара</span>
                       5.0
                       <svg class="rate__icon">
                         <use xlink:href="images/sprite.svg#star"></use>
@@ -800,6 +804,7 @@
                       </span>
                     </div>
                     <div class="rate">
+                      <span class="sr-only">рейтинг товара</span>
                       5.0
                       <svg class="rate__icon">
                         <use xlink:href="images/sprite.svg#star"></use>
@@ -841,6 +846,7 @@
                       </span>
                     </div>
                     <div class="rate">
+                      <span class="sr-only">рейтинг товара</span>
                       4.5
                       <svg class="rate__icon">
                         <use xlink:href="images/sprite.svg#star"></use>
@@ -882,6 +888,7 @@
                       </span>
                     </div>
                     <div class="rate">
+                      <span class="sr-only">рейтинг товара</span>
                       5.0
                       <svg class="rate__icon">
                         <use xlink:href="images/sprite.svg#star"></use>
@@ -923,6 +930,7 @@
                       </span>
                     </div>
                     <div class="rate">
+                      <span class="sr-only">рейтинг товара</span>
                       4.8
                       <svg class="rate__icon">
                         <use xlink:href="images/sprite.svg#star"></use>
@@ -964,6 +972,7 @@
                       </span>
                     </div>
                     <div class="rate">
+                      <span class="sr-only">рейтинг товара</span>
                       4.6
                       <svg class="rate__icon">
                         <use xlink:href="images/sprite.svg#star"></use>
@@ -983,22 +992,34 @@
       <div class="container">
         <ul class="sponsors__list">
           <li class="sponsors__item">
-            <img src="images/sponsors/Sprite.svg" alt=" Логотип Спрайт">
+            <a class="sponsors__links" href="#">
+              <img src="images/sponsors/Sprite.svg" alt="Перейти на страницу Спрайта">
+            </a>
           </li>
           <li class="sponsors__item">
-            <img src="images/sponsors/dr-pepper.svg" alt=" Логотип Доктор Пепер">
+            <a class="sponsors__links" href="#">
+              <img src="images/sponsors/dr-pepper.svg" alt="Перейти на страницу Спрайта Доктор Пепер">
+            </a>
           </li>
           <li class="sponsors__item">
-            <img src="images/sponsors/Coca-Cola.svg" alt=" Логотип Кока Кола">
+            <a class="sponsors__links" href="#">
+              <img src="images/sponsors/Coca-Cola.svg" alt="Перейти на страницу Кока Кола">
+            </a>
           </li>
           <li class="sponsors__item">
-            <img src="images/sponsors/pepsi.svg" alt=" Логотип Пепси">
+            <a class="sponsors__links" href="#">
+              <img src="images/sponsors/pepsi.svg" alt="Перейти на страницу Пепси">
+            </a>
           </li>
           <li class="sponsors__item">
-            <img src="images/sponsors/redbull.svg" alt=" Логотип Ред Бул">
+            <a class="sponsors__links" href="#">
+              <img src="images/sponsors/redbull.svg" alt="Перейти на страницу Ред Бул">
+            </a>
           </li>
           <li class="sponsors__item">
-            <img src="images/sponsors/fanta.svg" alt=" Логотип Фанта">
+            <a class="sponsors__links" href="#">
+              <img src="images/sponsors/fanta.svg" alt="Перейти на страницуы Фанта">
+            </a>
           </li>
         </ul>
 
