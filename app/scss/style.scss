@@ -460,11 +460,9 @@
 	}
 }
 
-.promo {
-	background-color: #f5f5f5;
-}
-
 .promo-products {
+	background-color: #f5f5f5;
+
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);

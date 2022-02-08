@@ -125,6 +125,10 @@ button {
   border-radius: 6px;
   border: 1px solid rgba(17, 17, 17, 0.2);
 
+  &--promo {
+    padding: 12px;
+  }
+
   &:hover {
     border: 1px solid $green900;
   }
@@ -160,6 +164,10 @@ button {
     position: relative;
     margin-bottom: 18px;
 
+    &--promo {
+      margin-bottom: 0;
+    }
+
     &:hover::before {
       content: "";
       position: absolute;
@@ -188,8 +196,29 @@ button {
   }
 
   &__img {
+    display: inline-block;
     object-fit: contain;
     object-position: center;
+
+    &--promo {
+      margin-right: 12px;
+      float: left;
+    }
+  }
+
+  &__availability {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+    color: $green900;
+
+    &--ends {
+      color: $red-900;
+    }
+
+    &--ended {
+      color: $silver-600;
+    }
   }
 
   &__title {
@@ -203,6 +232,9 @@ button {
     font-weight: 600;
     color: $dark-900;
 
+    &--promo {
+      margin: 0;
+    }
   }
 
   &__bottom {
@@ -210,6 +242,10 @@ button {
     justify-content: space-between;
     align-items: flex-end;
     padding: 0 18px;
+
+    &--promo {
+      padding: 0;
+    }
   }
 
   &__btn-cart {
@@ -236,6 +272,21 @@ button {
     height: 16px;
   }
 
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+
+  &__icon {
+    width: 16px;
+    height: 15px;
+    margin: 1px;
+    fill: $yellow-900;
+  }
 }
 
 .badge {
@@ -276,6 +327,12 @@ button {
   flex-direction: column;
   font-size: 10px;
 
+  &--promo {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+
   &__old {
     position: relative;
     color: $silver-600;
@@ -289,6 +346,14 @@ button {
       height: 25%;
       border-bottom: 1px solid $silver-600;
       transform: rotate(-15deg);
+    }
+  }
+
+  &__current {
+    &--promo {
+      font-weight: 600;
+      font-size: 14px;
+      margin-right: 12px;
     }
   }
 }
