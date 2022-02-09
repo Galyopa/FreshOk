@@ -308,10 +308,14 @@
 .banner {
 	position: relative;
 
-	&__item {
-		display: flex !important;
+	&__wrapper {
+		display: flex;
 		align-items: center;
 		min-height: 600px;
+	}
+
+	&__item {
+
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;

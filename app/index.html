@@ -179,42 +179,48 @@
       <div class="banner">
         <div class="banner__item" style="background-image: url('images/slider/carrot.jpg');">
           <div class="container">
-            <div class="banner__content">
-              <h3 class="banner__title">
-                свежачок вам в хату
-                <span class="banner__subtitle">Скидка -50%</span>
-              </h3>
-              <p class="banner__text">
-                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-              </p>
-              <a class="banner__link btn focus" href="#">Купить сейчас</a>
+            <div class="banner__wrapper">
+              <div class="banner__content">
+                <h3 class="banner__title">
+                  свежачок вам в хату
+                  <span class="banner__subtitle">Скидка -50%</span>
+                </h3>
+                <p class="banner__text">
+                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                </p>
+                <a class="banner__link btn focus" href="#">Купить сейчас</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="banner__item" style="background-image: url('images/slider/tomato.jpg');">
           <div class="container">
-            <div class="banner__content">
-              <h3 class="banner__title">
-                накрути себе томатов
-                <span class="banner__subtitle">акция: 3 кг по цене 1</span>
-              </h3>
-              <p class="banner__text">
-                Только с 12 по 15 июля скидка на домашние помидорчики
-              </p>
-              <a class="banner__link btn focus" href="#">Купить сейчас</a>
+            <div class="banner__wrapper">
+              <div class="banner__content">
+                <h3 class="banner__title">
+                  накрути себе томатов
+                  <span class="banner__subtitle">акция: 3 кг по цене 1</span>
+                </h3>
+                <p class="banner__text">
+                  Только с 12 по 15 июля скидка на домашние помидорчики
+                </p>
+                <a class="banner__link btn focus" href="#">Купить сейчас</a>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="banner__item" style="background-image: url('images/slider/greenery.jpg');">
           <div class="container">
-            <div class="banner__content">
-              <h3 class="banner__title">
-                Пусть остальные позеленеют от зависти
-                <span class="banner__subtitle">Распродажа зелени</span>
-              </h3>
-              <a class="banner__link btn focus" href="#">Купить сейчас</a>
+            <div class="banner__wrapper">
+              <div class="banner__content">
+                <h3 class="banner__title">
+                  Пусть остальные позеленеют от зависти
+                  <span class="banner__subtitle">Распродажа зелени</span>
+                </h3>
+                <a class="banner__link btn focus" href="#">Купить сейчас</a>
+              </div>
             </div>
           </div>
         </div>
@@ -320,7 +326,22 @@
                       </span>
                     </span>
                   </div>
-                  <button class="card-product__btn-cart focus" type="button">
+
+                  <div class="quantity">
+                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
+                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <button class=" card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
@@ -350,6 +371,19 @@
                         ₽
                       </span>
                     </span>
+                  </div>
+                  <div class="quantity">
+                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
+                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#plus"></use>
+                      </svg>
+                    </button>
                   </div>
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
@@ -387,6 +421,19 @@
                       </span>
                     </span>
                   </div>
+                  <div class="quantity">
+                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
+                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#plus"></use>
+                      </svg>
+                    </button>
+                  </div>
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -417,6 +464,19 @@
                         ₽
                       </span>
                     </span>
+                  </div>
+                  <div class="quantity">
+                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
+                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#plus"></use>
+                      </svg>
+                    </button>
                   </div>
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
@@ -453,6 +513,19 @@
                         ₽
                       </span>
                     </span>
+                  </div>
+                  <div class="quantity">
+                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
+                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#plus"></use>
+                      </svg>
+                    </button>
                   </div>
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
@@ -496,6 +569,19 @@
                       </span>
                     </span>
                   </div>
+                  <div class="quantity">
+                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
+                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#plus"></use>
+                      </svg>
+                    </button>
+                  </div>
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -532,6 +618,19 @@
                       </span>
                     </span>
                   </div>
+                  <div class="quantity">
+                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
+                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#plus"></use>
+                      </svg>
+                    </button>
+                  </div>
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -567,6 +666,19 @@
                         ₽
                       </span>
                     </span>
+                  </div>
+                  <div class="quantity">
+                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
+                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
+                      <svg class="quantity__icon">
+                        <use xlink:href="images/sprite.svg#plus"></use>
+                      </svg>
+                    </button>
                   </div>
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">

@@ -7,7 +7,7 @@ $(function () {
   });
 
   $('.sponsors__list').slick({
-    slidesToShow:5,
+    slidesToShow: 5,
     focusOnSelect: true,
     centerMode: true,
     arrows: false,
@@ -20,13 +20,13 @@ $(function () {
 
   var TopProducts = document.querySelector('[data-ref="top-products"]');
   var PromoProducts = document.querySelector('[data-ref="promo-products"]');
- 
+
   var config = {
     controls: {
       scope: 'local'
     }
   };
- 
+
   var mixer1 = mixitup(TopProducts, config);
   var mixer2 = mixitup(PromoProducts, config);
 
