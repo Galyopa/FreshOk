@@ -1,0 +1,160 @@
+.card-product {
+  position: relative;
+  padding: 57px 0 18px;
+  background-color: $white;
+  text-align: left;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+
+  &--promo {
+    padding: 12px;
+  }
+
+  &:hover {
+    border: 1px solid $green900;
+  }
+
+  &__btn-favorite {
+    position: absolute;
+    z-index: 3;
+    top: 7px;
+    right: 6px;
+    width: 44px;
+    height: 44px;
+    border-radius: 3px;
+    fill: $silver-600;
+
+    &:hover {
+      fill: $yellow-900;
+    }
+
+    &:active {
+      fill: rgba($color: $yellow-900, $alpha: 0.5)
+    }
+  }
+
+  &__icon-favorite {
+    width: 32px;
+    height: 29px;
+    margin: 9px 6px 6px;
+    fill: inherit;
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    margin-bottom: 18px;
+
+    &--promo {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        width: 48px;
+        height: 48px;
+        background-image: url('../images/icons/icon-search-green.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        border-radius: 50%;
+        background-color: $white;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    object-fit: contain;
+    object-position: center;
+
+    &--promo {
+      margin-right: 12px;
+      float: left;
+    }
+  }
+
+  &__availability {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+    color: $green900;
+
+    &--ends {
+      color: $red-900;
+    }
+
+    &--ended {
+      color: $silver-600;
+    }
+  }
+
+  &__title {
+    display: -webkit-box;
+    min-height: 4.2em;
+    margin: 0 18px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    color: $dark-900;
+
+    &--promo {
+      margin: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 18px;
+
+    &--promo {
+      padding: 0;
+    }
+  }
+
+  &__btn-cart {
+    width: 32px;
+    height: 32px;
+    background-color: $green900;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: $dark-green;
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__icon-cart {
+    margin: 8px;
+    width: 16px;
+    height: 16px;
+  }
+
+}

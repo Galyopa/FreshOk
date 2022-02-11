@@ -1,0 +1,25 @@
+.filter-products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+
+  &__item:not(:last-child) {
+    margin: 0 25px 20px 0;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 3px;
+
+    &:hover {
+      color: $green900;
+    }
+
+    &:active {
+      border-bottom: 3px solid $green200;
+    }
+  }
+}

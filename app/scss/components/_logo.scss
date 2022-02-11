@@ -1,0 +1,11 @@
+.logo {
+	border-radius: 3px;
+
+	&__img {
+		object-fit: contain;
+	}
+
+	&:hover {
+		opacity: 0.7;
+	}
+}

@@ -13,14 +13,13 @@
 
 <body>
   <header class="header">
-    <h1 class="sr-only">Интернет-магазин ФрешОк</h1>
     <div class="container">
       <nav class="nav">
         <div class="nav__top">
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link focus" href="#">
-                <svg class="nav__icon nav__icon--del">
+                <svg class="nav__icon" width="32" height="22">
                   <use xlink:href="images/sprite.svg#icon-del-address"></use>
                 </svg>
                 адрес и время доставки
@@ -28,7 +27,7 @@
             </li>
             <li class="nav__item">
               <a class="nav__link focus" href="#">
-                <svg class="nav__icon nav__icon--tel">
+                <svg class="nav__icon" width="23" height="22">
                   <use xlink:href="images/sprite.svg#icon-tel"></use>
                 </svg>
                 горячая линия 24/7
@@ -36,19 +35,19 @@
             </li>
           </ul>
 
-          <ul class="menu">
-            <li class="menu__item">
-              <a class="menu__link focus" href="#">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--right">
+              <a class="nav__link focus" href="#">
                 доставка
               </a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link focus" href="#">
+            <li class="nav__item nav__item--right">
+              <a class="nav__link focus" href="#">
                 о нас
               </a>
             </li>
-            <li class="menu__item ">
-              <a class="menu__link focus" href="#">
+            <li class="nav__item nav__item--right">
+              <a class="nav__link focus" href="#">
                 новости
               </a>
             </li>
@@ -60,7 +59,7 @@
             <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="60">
           </a>
           <div class="catalog">
-            <button class="catalog-btn focus" type="button">
+            <button class="catalog__btn focus" type="button">
               Каталог продуктов
             </button>
             <ul class="catalog__list">
@@ -126,15 +125,15 @@
               </li>
             </ul>
           </div>
-          <form class="search-form">
-            <svg class="search-form__icon">
+          <form class="form">
+            <svg class="form__icon" width="21" height="20">
               <use xlink:href="images/sprite.svg#search"></use>
             </svg>
-            <label class="search-form__label">
+            <label class="form__label form__label--search">
               <span class="sr-only">Введите название товара</span>
-              <input class="search-form__input focus" type="search" placeholder="Найти в магазине ..." name="search-form" required>
+              <input class="form__input form__input--search focus" type="search" placeholder="Найти в магазине ..." name="search-form" required>
             </label>
-            <button class="search-form__btn  form-btn focus" type="submit">
+            <button class="form__btn focus" type="submit">
               поиск
             </button>
           </form>
@@ -142,7 +141,7 @@
           <ul class="user-nav">
             <li class="user-nav__item">
               <button class="user-nav__btn focus" type="button">
-                <svg class="user-nav__icon user-nav__icon--user">
+                <svg class="user-nav__icon" width="25" height="32">
                   <use xlink:href="images/sprite.svg#user-icon"></use>
                 </svg>
                 <span class="sr-only">Открыть личный кабинет</span>
@@ -150,7 +149,7 @@
             </li>
             <li class="user-nav__item">
               <button class="user-nav__btn focus" type="button">
-                <svg class="user-nav__icon user-nav__icon--favorite">
+                <svg class="user-nav__icon" width="32" height="29">
                   <use xlink:href="images/sprite.svg#favorite"></use>
                 </svg>
                 <span class="sr-only">Открыть избранное</span>
@@ -159,7 +158,7 @@
             </li>
             <li class="user-nav__item">
               <button class="user-nav__btn focus" type="button">
-                <svg class="user-nav__icon user-nav__icon--cart">
+                <svg class="user-nav__icon" width="32" height="30">
                   <use xlink:href="images/sprite.svg#icon-cart"></use>
                 </svg>
                 <span class="sr-only">Открыть корзину</span>
@@ -173,13 +172,13 @@
   </header>
 
   <main class="main">
-
+    <h1 class="sr-only">Интернет-магазин ФрешОк</h1>
     <section class="hero">
-      <h2 class="sr-only">Акции магазина:</h2>
+      <h2 class="sr-only">Акции магазина</h2>
       <div class="banner">
         <div class="banner__item" style="background-image: url('images/slider/carrot.jpg');">
           <div class="container">
-            <div class="banner__wrapper">
+            <div class="banner__inner">
               <div class="banner__content">
                 <h3 class="banner__title">
                   свежачок вам в хату
@@ -196,7 +195,7 @@
 
         <div class="banner__item" style="background-image: url('images/slider/tomato.jpg');">
           <div class="container">
-            <div class="banner__wrapper">
+            <div class="banner__inner">
               <div class="banner__content">
                 <h3 class="banner__title">
                   накрути себе томатов
@@ -213,7 +212,7 @@
 
         <div class="banner__item" style="background-image: url('images/slider/greenery.jpg');">
           <div class="container">
-            <div class="banner__wrapper">
+            <div class="banner__inner">
               <div class="banner__content">
                 <h3 class="banner__title">
                   Пусть остальные позеленеют от зависти
@@ -260,29 +259,29 @@
           Топовые товары
         </h2>
         <div class="top-products__wrapper" data-ref="top-products">
-          <ul class="products-menu">
-            <li class="products-menu__item">
-              <button type="button" class="products-menu__btn focus" data-filter="all">
+          <ul class="filter-products">
+            <li class="filter-products__item">
+              <button type="button" class="filter-products__btn focus" data-filter="all">
                 все товары
               </button>
             </li>
-            <li class="products-menu__item">
-              <button type="button" class="products-menu__btn focus" data-filter=".fruit">
+            <li class="filter-products__item">
+              <button type="button" class="filter-products__btn focus" data-filter=".fruit">
                 фрукты
               </button>
             </li>
-            <li class="products-menu__item">
-              <button type="button" class="products-menu__btn focus" data-filter=".vegetables">
+            <li class="filter-products__item">
+              <button type="button" class="filter-products__btn focus" data-filter=".vegetables">
                 овощи
               </button>
             </li>
-            <li class="products-menu__item">
-              <button type="button" class="products-menu__btn focus" data-filter=".beverages">
+            <li class="filter-products__item">
+              <button type="button" class="filter-products__btn focus" data-filter=".beverages">
                 напитки
               </button>
             </li>
-            <li class="products-menu__item">
-              <button type="button" class="products-menu__btn focus" data-filter=".grocery">
+            <li class="filter-products__item">
+              <button type="button" class="filter-products__btn focus" data-filter=".grocery">
                 бакалея
               </button>
             </li>
@@ -326,18 +325,20 @@
                       </span>
                     </span>
                   </div>
-
+                  
                   <div class="quantity">
-                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                    <button class="quantity__btn focus quantity__btn--minus" type="button">
+                      <span class="sr-only">Уменьшить количество на одну единицу</span>
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
-                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
+                    <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
+                    <button class="quantity__btn focus quantity__btn--plus" type="button">
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#plus"></use>
                       </svg>
+                      <span class="sr-only">Увеличить количество на одну единицу</span>
                     </button>
                   </div>
 
@@ -372,19 +373,23 @@
                       </span>
                     </span>
                   </div>
+
                   <div class="quantity">
-                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                    <button class="quantity__btn focus quantity__btn--minus" type="button">
+                      <span class="sr-only">Уменьшить количество на одну единицу</span>
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
-                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
+                    <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
+                    <button class="quantity__btn focus quantity__btn--plus" type="button">
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#plus"></use>
                       </svg>
+                      <span class="sr-only">Увеличить количество на одну единицу</span>
                     </button>
                   </div>
+
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -421,23 +426,23 @@
                       </span>
                     </span>
                   </div>
+
                   <div class="quantity">
-                    <span class="sr-only">Количество</span>
-                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
-                      <span class="sr-only">Увеличить количество на одну единицу</span>
+                    <button class="quantity__btn focus quantity__btn--minus" type="button">
+                      <span class="sr-only">Уменьшить количество на одну единицу</span>
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <span class="sr-only">Текущее количество</span>
-                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
-                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
-                      <span class="sr-only">Уменьшить количество на одну единицу</span>
+                    <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
+                    <button class="quantity__btn focus quantity__btn--plus" type="button">
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#plus"></use>
                       </svg>
+                      <span class="sr-only">Увеличить количество на одну единицу</span>
                     </button>
                   </div>
+
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -469,23 +474,23 @@
                       </span>
                     </span>
                   </div>
+
                   <div class="quantity">
-                    <span class="sr-only">Количество</span>
-                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
-                      <span class="sr-only">Увеличить количество на одну единицу</span>
+                    <button class="quantity__btn focus quantity__btn--minus" type="button">
+                      <span class="sr-only">Уменьшить количество на одну единицу</span>
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <span class="sr-only">Текущее количество</span>
-                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
-                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
-                      <span class="sr-only">Уменьшить количество на одну единицу</span>
+                    <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
+                    <button class="quantity__btn focus quantity__btn--plus" type="button">
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#plus"></use>
                       </svg>
+                      <span class="sr-only">Увеличить количество на одну единицу</span>
                     </button>
                   </div>
+
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -522,23 +527,23 @@
                       </span>
                     </span>
                   </div>
+
                   <div class="quantity">
-                    <span class="sr-only">Количество</span>
-                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
-                      <span class="sr-only">Увеличить количество на одну единицу</span>
+                    <button class="quantity__btn focus quantity__btn--minus" type="button">
+                      <span class="sr-only">Уменьшить количество на одну единицу</span>
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <span class="sr-only">Текущее количество</span>
-                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
-                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
-                      <span class="sr-only">Уменьшить количество на одну единицу</span>
+                    <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
+                    <button class="quantity__btn focus quantity__btn--plus" type="button">
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#plus"></use>
                       </svg>
+                      <span class="sr-only">Увеличить количество на одну единицу</span>
                     </button>
                   </div>
+
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -581,23 +586,23 @@
                       </span>
                     </span>
                   </div>
+
                   <div class="quantity">
-                    <span class="sr-only">Количество</span>
-                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
-                      <span class="sr-only">Увеличить количество на одну единицу</span>
+                    <button class="quantity__btn focus quantity__btn--minus" type="button">
+                      <span class="sr-only">Уменьшить количество на одну единицу</span>
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <span class="sr-only">Текущее количество</span>
-                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
-                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
-                      <span class="sr-only">Уменьшить количество на одну единицу</span>
+                    <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
+                    <button class="quantity__btn focus quantity__btn--plus" type="button">
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#plus"></use>
                       </svg>
+                      <span class="sr-only">Увеличить количество на одну единицу</span>
                     </button>
                   </div>
+
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -634,23 +639,23 @@
                       </span>
                     </span>
                   </div>
+
                   <div class="quantity">
-                    <span class="sr-only">Количество</span>
-                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
-                      <span class="sr-only">Увеличить количество на одну единицу</span>
+                    <button class="quantity__btn focus quantity__btn--minus" type="button">
+                      <span class="sr-only">Уменьшить количество на одну единицу</span>
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <span class="sr-only">Текущее количество</span>
-                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
-                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
-                      <span class="sr-only">Уменьшить количество на одну единицу</span>
+                    <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
+                    <button class="quantity__btn focus quantity__btn--plus" type="button">
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#plus"></use>
                       </svg>
+                      <span class="sr-only">Увеличить количество на одну единицу</span>
                     </button>
                   </div>
+
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -687,23 +692,23 @@
                       </span>
                     </span>
                   </div>
+
                   <div class="quantity">
-                    <span class="sr-only">Количество</span>
-                    <button class="quantity__btn quantity__btn--minus" type="button" onclick="this.nextElementSibling.stepDown()">
-                      <span class="sr-only">Увеличить количество на одну единицу</span>
+                    <button class="quantity__btn focus quantity__btn--minus" type="button">
+                      <span class="sr-only">Уменьшить количество на одну единицу</span>
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <span class="sr-only">Текущее количество</span>
-                    <input class="quantity__count" type="number" min="0" max="99" value="1" readonly>
-                    <button class="quantity__btn quantity__btn--plus"  type="button" onclick="this.previousElementSibling.stepUp()">
-                      <span class="sr-only">Уменьшить количество на одну единицу</span>
+                    <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
+                    <button class="quantity__btn focus quantity__btn--plus" type="button">
                       <svg class="quantity__icon">
                         <use xlink:href="images/sprite.svg#plus"></use>
                       </svg>
+                      <span class="sr-only">Увеличить количество на одну единицу</span>
                     </button>
                   </div>
+
                   <button class="card-product__btn-cart focus" type="button">
                     <svg class="card-product__icon-cart">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -715,41 +720,45 @@
             </li>
           </ul>
         </div>
-        <a class="top-products__link btn" href="#">Показать еще</a>
+        <a class="top-products__btn btn" href="#">Показать еще</a>
+      </div>
+    </section>
 
-
-        <ul class="product-banner">
-          <li class="product-banner__item product-banner__item--light" style="background-image: url('images/product-banner/fruits.jpg');">
-            <span class="product-banner__subtitle">
+    <section class="banner-bottom">
+      <div class="container">
+        <h2 class="sr-only">Скидки</h2>
+        <ul class="banner-bottom__list">
+          <li class="banner-bottom__item banner-bottom__item--long banner-bottom__item--light" style="background-image: url('images/banner-bottom/fruits.jpg');">
+            <span class="banner-bottom__subtitle">
               свежайшие фрукты
             </span>
-            <div class="product-banner__title">
+            <h3 class="banner-bottom__title">
               начни фруктовое лето
               всего от 99 ₽
-            </div>
-            <a class="product-banner__link product-banner__link--light" href="#">
+            </h3>
+            <a class="banner-bottom__link banner-bottom__link--light" href="#">
               перейти к покупкам
             </a>
           </li>
-          <li class="product-banner__item" style="background-image: url('images/product-banner/veg.jpg');">
-            <span class="product-banner__subtitle">
+          <li class="banner-bottom__item" style="background-image: url('images/banner-bottom/veg.jpg');">
+            <span class="banner-bottom__subtitle">
               сезонная распродажа
             </span>
-            <div class="product-banner__title">
+            <h3 class="banner-bottom__title">
               овощепад до -50%
-            </div>
-            <a class="product-banner__link" href="#">
+            </h3>
+            <a class="banner-bottom__link" href="#">
               перейти к покупкам
             </a>
           </li>
-          <li class="product-banner__item" style="background-image: url('images/product-banner/bread.jpg');">
-            <span class="product-banner__subtitle">
+          <li class="banner-bottom__item" style="background-image: url('images/banner-bottom/bread.jpg');">
+            <span class="banner-bottom__subtitle">
               ням-ням
             </span>
-            <div class="product-banner__title">
+            <h3 class="banner-bottom__title">
               свежий хлебчик
-            </div>
-            <a class="product-banner__link" href="#">
+            </h3>
+            <a class="banner-bottom__link" href="#">
               перейти к покупкам
             </a>
           </li>
@@ -763,19 +772,19 @@
           акции
         </h2>
         <div class="promo__wrapper" data-ref="promo-products">
-          <ul class="products-menu">
-            <li class="products-menu__item">
-              <button type="button" class="products-menu__btn focus" data-filter="all">
+          <ul class="filter-products">
+            <li class="filter-products__item">
+              <button type="button" class="filter-products__btn focus" data-filter="all">
                 все товары
               </button>
             </li>
-            <li class="products-menu__item">
-              <button type="button" class="products-menu__btn focus" data-filter=".new">
+            <li class="filter-products__item">
+              <button type="button" class="filter-products__btn focus" data-filter=".new">
                 новинки
               </button>
             </li>
-            <li class="products-menu__item">
-              <button type="button" class="products-menu__btn focus" data-filter=".hits">
+            <li class="filter-products__item">
+              <button type="button" class="filter-products__btn focus" data-filter=".hits">
                 хиты
               </button>
             </li>
@@ -1120,46 +1129,52 @@
             </li>
           </ul>
         </div>
-        <a class="promo-products__link btn focus" href="#">Показать еще</a>
+        <a class="promo-products__btn btn focus" href="#">Показать еще</a>
+      </div>
+    </section>
+
+    <section class="sponsors">
+      <div class="container">
+        <h2 class="sr-only">Спонсоры</h2>
+        <div class="sponsors__list">
+          <div class="sponsors__item">
+            <a class="sponsors__link focus" href="#">
+              <img class="sponsors__img" src="images/sponsors/Sprite.svg" alt="Перейти на страницу Спрайта" width="88" height="33">
+            </a>
+          </div>
+          <div class="sponsors__item">
+            <a class="sponsors__link focus" href="#">
+              <img class="sponsors__img" src="images/sponsors/dr-pepper.svg" alt="Перейти на страницу Доктор Пепер" width="80" height="57">
+            </a>
+          </div>
+          <div class="sponsors__item">
+            <a class="sponsors__link focus" href="#">
+              <img class="sponsors__img" src="images/sponsors/Coca-Cola.svg" alt="Перейти на страницу Кока Кола" width="80" height="26">
+            </a>
+          </div>
+          <div class="sponsors__item">
+            <a class="sponsors__link focus" href="#">
+              <img class="sponsors__img" src="images/sponsors/pepsi.svg" alt="Перейти на страницу Пепси" width="80" height="31">
+            </a>
+          </div>
+          <div class="sponsors__item">
+            <a class="sponsors__link focus" href="#">
+              <img class="sponsors__img" src="images/sponsors/redbull.svg" alt="Перейти на страницу Ред Бул" width="80" height="49">
+            </a>
+          </div>
+          <div class="sponsors__item">
+            <a class="sponsors__link focus" href="#">
+              <img class="sponsors__img" src="images/sponsors/fanta.svg" alt="Перейти на страницуы Фанта" width="80" height="59">
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="news section">
       <div class="container">
-        <ul class="sponsors__list">
-          <li class="sponsors__item">
-            <a class="sponsors__links" href="#">
-              <img src="images/sponsors/Sprite.svg" alt="Перейти на страницу Спрайта">
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__links" href="#">
-              <img src="images/sponsors/dr-pepper.svg" alt="Перейти на страницу Спрайта Доктор Пепер">
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__links" href="#">
-              <img src="images/sponsors/Coca-Cola.svg" alt="Перейти на страницу Кока Кола">
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__links" href="#">
-              <img src="images/sponsors/pepsi.svg" alt="Перейти на страницу Пепси">
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__links" href="#">
-              <img src="images/sponsors/redbull.svg" alt="Перейти на страницу Ред Бул">
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__links" href="#">
-              <img src="images/sponsors/fanta.svg" alt="Перейти на страницуы Фанта">
-            </a>
-          </li>
-        </ul>
 
-        <div class="news-wrapper">
+        <div class="news__wrapper">
           <h2 class="title">
             наши новости
           </h2>
@@ -1171,16 +1186,16 @@
         <ul class="news__list">
           <li class="news__item">
             <article class="news__article">
-              <div class="date">
-                <span class="date__month">
+              <time class="news__date" datetime="07-15">
+                <span class="news__month">
                   июль
                 </span>
-                <span class="date__day">
+                <span class="news__day">
                   15
                 </span>
-              </div>
+              </time>
               <a class="news__link" href="#">
-                <img src="images/news/fruits.jpg" class="news__img" alt="Клубника">
+                <img class="news__img" src="images/news/fruits.jpg" alt="Клубника" width="410" height="240">
                 <h3 class="news__title">
                   Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!
                 </h3>
@@ -1189,16 +1204,16 @@
           </li>
           <li class="news__item">
             <article class="news__article">
-              <div class="date">
-                <span class="date__month">
+              <time class="news__date" datetime="05-07">
+                <span class="news__month">
                   май
                 </span>
-                <span class="date__day">
+                <span class="news__day">
                   07
                 </span>
-              </div>
+              </time>
               <a class="news__link" href="#">
-                <img src="images/news/mango.jpg" class="news__img" alt="Манго">
+                <img class="news__img"  src="images/news/mango.jpg" alt="Манго"  width="410" height="240">
                 <h3 class="news__title">
                   Шикарнейший выбор манго в нашем онлайн-маркете
                 </h3>
@@ -1207,16 +1222,16 @@
           </li>
           <li class="news__item">
             <article class="news__article">
-              <div class="date">
-                <span class="date__month">
+              <time class="news__date" datetime="02-20">
+                <span class="news__month">
                   февраль
                 </span>
-                <span class="date__day">
+                <span class="news__day">
                   20
                 </span>
-              </div>
+              </time>
               <a class="news__link" href="#">
-                <img src="images/news/papaya.jpg" class="news__img" alt="Папайя">
+                <img  class="news__img" src="images/news/papaya.jpg" alt="Папайя"  width="410" height="240">
                 <h3 class="news__title">
                   Всё, что вы хотели знать о папайя
                 </h3>
@@ -1232,61 +1247,60 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-top">
+      <div class="footer__top">
         <a class="logo focus" href="#">
           <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="60">
         </a>
-        <div class="footer-top__inner">
-          <form class="form-subscribe">
-            <span class="form-subscribe__text">
+        <div class="footer__inner">
+          <form class="form form--subscribe">
+            <span class="form__text">
               Следите за нашими акциями
             </span>
-            <label class="form-subscribe__label">
+            <label class="form__label">
               <span class="sr-only">Введите свой email</span>
-              <input class="form-subscribe__input focus" type="email" placeholder="email@email.com" name="email-subscribe" required>
+              <input class="form__input form__input--subscribe focus" type="email" placeholder="email@email.com" name="email-subscribe" required>
             </label>
-
-            <button class="form-subscribe__btn form-btn focus" type="submit">подписаться</button>
+            <button class="form__btn form__btn--subscribe focus" type="submit">подписаться</button>
           </form>
-          <nav class="footer-top__nav">
-            <ul class="footer-top__list">
-              <li class="footer-top__item">
-                <a class="footer-top__link focus" href="#">
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link focus" href="#">
                   О нас
                 </a>
               </li>
-              <li class="footer-top__item">
-                <a class="footer-top__link focus" href="#">
+              <li class="footer__item">
+                <a class="footer__link focus" href="#">
                   Контакты
                 </a>
               </li>
-              <li class="footer-top__item">
-                <a class="footer-top__link focus" href="#">
+              <li class="footer__item">
+                <a class="footer__link focus" href="#">
                   Публичная оферта
                 </a>
               </li>
-              <li class="footer-top__item">
-                <a class="footer-top__link focus" href="#">
+              <li class="footer__item">
+                <a class="footer__link focus" href="#">
                   Оплата и доставка
                 </a>
               </li>
-              <li class="footer-top__item">
-                <a class="footer-top__link focus" href="#">
+              <li class="footer__item">
+                <a class="footer__link focus" href="#">
                   Вакансии
                 </a>
               </li>
-              <li class="footer-top__item">
-                <a class="footer-top__link focus" href="#">
+              <li class="footer__item">
+                <a class="footer__link focus" href="#">
                   Акции
                 </a>
               </li>
-              <li class="footer-top__item">
-                <a class="footer-top__link focus" href="#">
+              <li class="footer__item">
+                <a class="footer__link focus" href="#">
                   Отзывы
                 </a>
               </li>
-              <li class="footer-top__item">
-                <a class="footer-top__link focus" href="#">
+              <li class="footer__item">
+                <a class="footer__link focus" href="#">
                   Новости
                 </a>
               </li>
@@ -1308,7 +1322,7 @@
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link focus" href="#">
-                  <svg class="social__icon">
+                  <svg class="social__icon" width="32" height="32">
                     <use xlink:href="images/sprite.svg#facebook"></use>
                   </svg>
                   <span class="sr-only">Перейти на Фейсбук страницу</span>
@@ -1317,7 +1331,7 @@
               <li class="social__item">
                 <a class="social__link focus" href="#">
                   <span class="sr-only">Перейти на Ютьюб канал </span>
-                  <svg class="social__icon">
+                  <svg class="social__icon" width="32" height="32">
                     <use xlink:href="images/sprite.svg#youtube"></use>
                   </svg>
                 </a>
@@ -1325,7 +1339,7 @@
               <li class="social__item">
                 <a class="social__link focus" href="#">
                   <span class="sr-only">Перейти в Телеграм канал магазина</span>
-                  <svg class="social__icon">
+                  <svg class="social__icon" width="32" height="32">
                     <use xlink:href="images/sprite.svg#telegram"></use>
                   </svg>
                 </a>
@@ -1333,22 +1347,23 @@
               <li class="social__item">
                 <a class="social__link focus" href="#">
                   <span class="sr-only">Перейти Инстаграм страницу магазина</span>
-                  <svg class="social__icon">
+                  <svg class="social__icon" width="32" height="32">
                     <use xlink:href="images/sprite.svg#instagram"></use>
                   </svg>
                 </a>
               </li>
+              
             </ul>
           </address>
         </div>
       </div>
-      <div class="footer-bottom">
+      <div class="footer__bottom">
         <span class="copyright">&copy; 2021 фрешок</span>
         <ul class="payments__list">
-          <li class="payments__item" style="background-image: url(images/icons/visa.svg);">
+          <li class="payments__item" style="background-image: url('images/icons/visa.svg');">
             <span class="sr-only">Принимается к оплате Виза</span>
           </li>
-          <li class="payments__item" style="background-image: url(images/icons/mastercard.svg);">
+          <li class="payments__item" style="background-image: url('images/icons/mastercard.svg');">
             <span class="sr-only">Принимается к оплате Мастеркард</span>
           </li>
         </ul>

@@ -1,0 +1,81 @@
+.banner {
+	position: relative;
+
+	&__item {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		min-height: 600px;
+	}
+
+	&__content {
+		padding: 24px;
+		background-color: rgba($color: #FFFFFF, $alpha: 0.8);
+	}
+
+	&__title {
+		width: 63%;
+		margin-bottom: 12px;
+		font-family: 'Ruda', sans-serif;
+		font-weight: 900;
+		font-size: 60px;
+		line-height: 1.3;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		color: $red-900;
+	}
+
+	&__text {
+		margin-bottom: 32px;
+	}
+
+	&__btn {
+		position: absolute;
+		z-index: 3;
+		top: 45%;
+		width: 60px;
+		height: 60px;
+		border-radius: 6px;
+		background-color: rgba($color: #FFFFFF, $alpha: 0.8);
+		fill: $dark-500;
+	}
+
+	&__btn--prev {
+		left: 3%;
+	}
+
+	&__btn--next {
+		right: 3%;
+	}
+
+	&__btn:hover {
+		background-color: $green200;
+		fill: $green900;
+	}
+
+	&__btn:focus {
+		outline: 3px solid rgba($color: $green900, $alpha: 0.5);
+	}
+
+	&__btn:active {
+		fill: $green900;
+	}
+
+	&__btn.disabled {
+		fill: $green900;
+	}
+
+	&__svg {
+		margin: 14px 20px;
+		width: 20px;
+		height: 32px;
+		fill: inherit;
+	}
+}

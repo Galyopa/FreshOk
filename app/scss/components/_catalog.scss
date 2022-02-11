@@ -1,0 +1,89 @@
+.catalog {
+	position: relative;
+
+	&__btn {
+		position: relative;
+		padding: 15px 40px 15px 60px;
+		font-weight: 600;
+		font-size: 14px;
+		color: $green900;
+		background-color: $white;
+		border-radius: 6px;
+
+		&.active {
+			border-radius: 6px 6px 0 0;
+			background-color: $green200;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 18px;
+			width: 25px;
+			height: 17px;
+			background-image: url('../images/icons/nav_icon.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: 18px;
+			top: 47%;
+			width: 8px;
+			height: 4px;
+			background-image: url('../images/icons/arrow_down.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			transition: transform 0.3s;
+		}
+
+		&.active::after,
+		&:hover::after {
+			transform: rotate(180deg)
+		}
+	}
+
+
+	&__list {
+		position: absolute;
+		display: none;
+		width: 100%;
+		z-index: 10;
+		background-color: $white;
+		border-bottom: 1px solid transparent;
+		border-radius: 0 0 6px 6px;
+	}
+
+	&__list.active {
+		display: block;
+	}
+
+	&__item {
+		border-bottom: 1px solid rgba($color: $silver-600, $alpha: 0.3);
+	}
+
+	&__item:last-child {
+		border-bottom: 1px solid transparent;
+		border-radius: 0 0 6px 6px;
+	}
+
+	&__link {
+		display: block;
+		padding: 15px 24px;
+		color: #000000;
+
+		&:hover {
+			color: $green900;
+			box-shadow: 3px 0px 0px 0px $green900 inset;
+		}
+
+		&:active {
+			color: $silver-600;
+		}
+	}
+
+}

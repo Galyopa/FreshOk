@@ -1,7 +1,7 @@
 $(function () {
   $('.banner').slick({
-    prevArrow: '<button type="button" class="banner__btn banner__btn--prev"> <svg class="banner__svg"><use xlink:href="images/sprite.svg#slick-prev"></use></svg></button>',
-    nextArrow: '<button type="button" class="banner__btn banner__btn--next"> <svg class="banner__svg"><use xlink:href="images/sprite.svg#slick-next"></use></svg></button>',
+    prevArrow: '<button type="button" class="banner__btn banner__btn--prev"> <span class="sr-only">Предыдущий слайд</span> <svg class="banner__svg"><use xlink:href="images/sprite.svg#slick-prev"></use></svg></button>',
+    nextArrow: '<button type="button" class="banner__btn banner__btn--next"> <span class="sr-only">Следующий слайд</span> <svg class="banner__svg"><use xlink:href="images/sprite.svg#slick-next"></use></svg></button>',
     autoplay: true,
     autoplaySpeed: 3000,
   });
@@ -13,9 +13,17 @@ $(function () {
     arrows: false,
   });
 
-  $('.catalog-btn').on('click', function () {
+  $('.catalog__btn').on('click', function () {
     $('.catalog__list').toggleClass('active');
     $(this).toggleClass('active');
+  });
+
+  $('.quantity__btn--minus').on('click', function () {
+    this.nextElementSibling.stepDown();
+  });
+
+  $('.quantity__btn--plus').on('click', function () {
+    this.previousElementSibling.stepUp();
   });
 
   var TopProducts = document.querySelector('[data-ref="top-products"]');

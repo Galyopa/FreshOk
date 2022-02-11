@@ -1,0 +1,27 @@
+.top-products {
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 30px;
+		margin-bottom: 48px;
+	}
+
+	&__link {
+		border: 1px solid $green900;
+		color: $green900;
+		background-color: $white;
+
+		&:hover {
+			background-color: $green100;
+		}
+
+		&:focus {
+			outline: 4px solid rgba($color: $green900, $alpha: 0.5);
+		}
+
+		&:active {
+			box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+		}
+	}
+}
