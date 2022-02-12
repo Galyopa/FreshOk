@@ -26,16 +26,26 @@ $(function () {
     this.previousElementSibling.stepUp();
   });
 
-  var TopProducts = document.querySelector('[data-ref="top-products"]');
-  var PromoProducts = document.querySelector('[data-ref="promo-products"]');
+  $(".rate__star").rateYo({
+    numStars: 1,
+    maxValue: 5,
+    normalFill: "#C1C1C1",
+    ratedFill: "#FFB800",
+    starSvg: "<svg><use xlink:href='images/sprite.svg#star'></use></svg>",
+    starWidth: "16px",
+    readOnly: true,
+  });
 
-  var config = {
-    controls: {
-      scope: 'local'
-    }
-  };
+var TopProducts = document.querySelector('[data-ref="top-products"]');
+var PromoProducts = document.querySelector('[data-ref="promo-products"]');
 
-  var mixer1 = mixitup(TopProducts, config);
-  var mixer2 = mixitup(PromoProducts, config);
+var config = {
+  controls: {
+    scope: 'local'
+  }
+};
+
+var mixer1 = mixitup(TopProducts, config);
+var mixer2 = mixitup(PromoProducts, config);
 
 });

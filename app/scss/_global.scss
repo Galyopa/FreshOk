@@ -16,7 +16,7 @@ body {
   background-color: $white;
 }
 
-svg {
+svg:not(div[class*="rate"] svg) {
   fill: $white;
 }
 
@@ -105,11 +105,5 @@ button {
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
-  fill: $yellow-900;
-
-  &__icon {
-    width: 16px;
-    height: 15px;
-    margin: 1px;
-  }
+  
 }
