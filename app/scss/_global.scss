@@ -16,7 +16,7 @@ body {
   background-color: $white;
 }
 
-svg:not(div[class*="rate"] svg) {
+svg:not([class="rate__icon"]) {
   fill: $white;
 }
 
@@ -68,7 +68,7 @@ button {
   background-color: $green900;
   color: $white;
   border-radius: 6px;
-  
+
   &:hover {
     background-color: $dark-green;
   }
@@ -105,5 +105,4 @@ button {
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
-  
 }

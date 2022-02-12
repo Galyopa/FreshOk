@@ -31,7 +31,7 @@ $(function () {
     maxValue: 5,
     normalFill: "#C1C1C1",
     ratedFill: "#FFB800",
-    starSvg: "<svg><use xlink:href='images/sprite.svg#star'></use></svg>",
+    starSvg: "<svg class='rate__icon'><use xlink:href='images/sprite.svg#star'></use></svg>",
     starWidth: "16px",
     readOnly: true,
   });
