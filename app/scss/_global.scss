@@ -17,7 +17,7 @@ body {
 }
 
 svg:not([class="rate__icon"]) {
-  fill: $white;
+  fill: inherit;
 }
 
 button,
@@ -91,7 +91,19 @@ button {
   color: $dark-900;
   text-transform: uppercase;
 }
+@import 'global-components/cart';
 
+.cart__price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  color: $dark-500;
+}
+
+.cart__currency {
+  font-size: 18px;
+  margin-left: -5px;
+}
 @import 'global-components/filter-products';
 @import 'global-components/card-product';
 @import 'global-components/badge';

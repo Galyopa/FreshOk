@@ -6,8 +6,14 @@
   align-self: center;
   margin-left: 20%;
 
+  &--cart {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
   &__btn {
     background-color: $green900;
+    fill: $white;
 
     &--minus {
       border-radius: 3px 0 0 3px;

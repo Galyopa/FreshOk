@@ -11,6 +11,12 @@
     padding: 12px;
   }
 
+  &--cart {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
   &:hover {
     border: 1px solid $green900;
   }
@@ -48,6 +54,12 @@
 
     &--promo {
       margin-bottom: 0;
+    }
+
+    &--cart{
+      display: inline-block;
+      margin-bottom: 0;
+
     }
 
     &:hover {
@@ -88,6 +100,11 @@
       margin-right: 12px;
       float: left;
     }
+
+    &--cart {
+      margin-right: 12px;
+      float: left;
+    }
   }
 
   &__availability {
@@ -119,6 +136,13 @@
     &--promo {
       margin: 0;
     }
+
+    &--cart {
+      max-width: 170px;
+      min-height: 2.8em;
+      -webkit-line-clamp: 2;
+      margin: 0;
+    }
   }
 
   &__bottom {
@@ -131,6 +155,12 @@
     &--promo {
       padding: 0;
     }
+
+    &--cart {
+      align-self: flex-end;
+      flex-wrap: nowrap;
+      padding: 0;
+    }
   }
 
   &__btn-cart {
@@ -141,6 +171,7 @@
     background-repeat: no-repeat;
     background-size: 16px 16px;
     border-radius: 3px;
+    fill: $white;
 
     &:hover {
       background-color: $dark-green;

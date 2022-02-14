@@ -157,13 +157,143 @@
               </button>
             </li>
             <li class="user-nav__item">
-              <button class="user-nav__btn focus" type="button">
+              <button class="user-nav__btn user-nav__btn--cart focus" type="button">
                 <svg class="user-nav__icon" width="32" height="30">
                   <use xlink:href="images/sprite.svg#icon-cart"></use>
                 </svg>
                 <span class="sr-only">Открыть корзину</span>
                 <span class="user-nav__num">554</span>
               </button>
+              <div class="cart">
+                <div class="cart__top">
+                  <h2 class="cart__title">
+                    Корзина
+                  </h2>
+                  <button class="cart__btn-clear focus" type="reset">
+                    очистить корзину
+                  </button>
+                  <button class="cart__btn-close focus" type="button">
+                    <svg class="cart__icon-close" width="24" height="24">
+                      <use xlink:href="images/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="cart__list">
+                  <li class="cart__item">
+                    <article class="card-product card-product--cart">
+                      <button class="cart__btn-close cart__btn-close--product focus" type="button">
+                        <svg class="cart__icon-close" width="12" height="12">
+                          <use xlink:href="images/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                      <a class="card-product__link card-product__link--cart focus" href="#">
+                        <img class="card-product__img card-product__img--cart" src="images/products/pineapple.jpg" alt="Ананас" width="60" height="60">
+                        <h3 class="card-product__title card-product__title--cart">
+                          Ананас, 1кг
+                        </h3>
+                        <div class="price">
+                          <span class="price__current cart__price">
+                            999
+                            <span class="price__currency cart__currency">
+                              ₽
+                            </span>
+                          </span>
+                        </div>
+                      </a>
+                      
+                      <div class="card-product__bottom card-product__bottom--cart">
+                        <div class="quantity quantity--cart">
+                          <button class="quantity__btn focus quantity__btn--minus" type="button">
+                            <span class="sr-only">Уменьшить количество на одну единицу</span>
+                            <svg class="quantity__icon">
+                              <use xlink:href="images/sprite.svg#minus"></use>
+                            </svg>
+                          </button>
+                          <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
+                          <button class="quantity__btn focus quantity__btn--plus" type="button">
+                            <svg class="quantity__icon">
+                              <use xlink:href="images/sprite.svg#plus"></use>
+                            </svg>
+                            <span class="sr-only">Увеличить количество на одну единицу</span>
+                          </button>
+                        </div>
+                        <div class="price">
+                          <span class="price__total-product cart__price">
+                            999
+                            <span class="price__currency cart__currency">
+                              ₽
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="cart__item">
+                    <article class="card-product card-product--cart">
+                      <button class="cart__btn-close cart__btn-close--product focus" type="button">
+                        <svg class="cart__icon-close" width="12" height="12">
+                          <use xlink:href="images/sprite.svg#close"></use>
+                        </svg>
+                      </button>
+                      <a class="card-product__link card-product__link--cart focus" href="#">
+                        <img class="card-product__img card-product__img--cart" src="images/products/dragon-fruit.jpg" alt="Питахайя" width="60" height="60">
+                        <h3 class="card-product__title card-product__title--cart">
+                          Питахайя красная с белой мякотью, 1шт
+                        </h3>
+                        <div class="price">
+                          <span class="price__current cart__price">
+                            1019
+                            <span class="price__currency cart__currency">
+                              ₽
+                            </span>
+                          </span>
+                        </div>
+                      </a>
+                      
+                      <div class="card-product__bottom card-product__bottom--cart">
+                        <div class="quantity quantity--cart">
+                          <button class="quantity__btn focus quantity__btn--minus" type="button">
+                            <span class="sr-only">Уменьшить количество на одну единицу</span>
+                            <svg class="quantity__icon">
+                              <use xlink:href="images/sprite.svg#minus"></use>
+                            </svg>
+                          </button>
+                          <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
+                          <button class="quantity__btn focus quantity__btn--plus" type="button">
+                            <svg class="quantity__icon">
+                              <use xlink:href="images/sprite.svg#plus"></use>
+                            </svg>
+                            <span class="sr-only">Увеличить количество на одну единицу</span>
+                          </button>
+                        </div>
+                        <div class="price">
+                          <span class="price__total-product cart__price">
+                            2038
+                            <span class="price__currency cart__currency">
+                              ₽
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+
+                <div class="cart__total">
+                  <span class="cart__text">
+                    Товаров на сумму
+                  </span>
+                  <span class="cart__price">
+                    999
+                    <span class="cart__currency">
+                      ₽
+                    </span>
+                  </span>
+                </div>
+                <a class="cart__link focus" href="#">
+                  Оформить заказ
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -822,7 +952,7 @@
                         </span>
                       </span>
                     </div>
-                    
+
                     <div class="rate">
                       <span class="sr-only">рейтинг товара</span>
                       <span class="rate__text">

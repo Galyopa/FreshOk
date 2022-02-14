@@ -18,6 +18,14 @@ $(function () {
     $(this).toggleClass('active');
   });
 
+  $('.user-nav__btn--cart').on('click', function () {
+    $('.cart').addClass('active');
+  });
+
+  $('.cart__btn-close').on('click', function () {
+    $('.cart').removeClass('active');
+  });
+
   $('.quantity__btn--minus').on('click', function () {
     this.nextElementSibling.stepDown();
   });
