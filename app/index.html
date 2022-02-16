@@ -140,16 +140,16 @@
 
           <ul class="user-nav">
             <li class="user-nav__item">
-              <button class="user-nav__btn focus" type="button">
-                <svg class="user-nav__icon" width="25" height="32">
+              <button class="btn-square btn-square--nav focus" type="button">
+                <svg class="icon" width="25" height="32">
                   <use xlink:href="images/sprite.svg#user-icon"></use>
                 </svg>
                 <span class="sr-only">Открыть личный кабинет</span>
               </button>
             </li>
             <li class="user-nav__item">
-              <button class="user-nav__btn focus" type="button">
-                <svg class="user-nav__icon" width="32" height="29">
+              <button class="btn-square btn-square--nav focus" type="button">
+                <svg class="icon" width="32" height="29">
                   <use xlink:href="images/sprite.svg#favorite"></use>
                 </svg>
                 <span class="sr-only">Открыть избранное</span>
@@ -157,8 +157,8 @@
               </button>
             </li>
             <li class="user-nav__item">
-              <button class="user-nav__btn user-nav__btn--cart focus" type="button">
-                <svg class="user-nav__icon" width="32" height="30">
+              <button class="btn-square btn-square--nav focus" id="btn-cart" type="button">
+                <svg class="icon" width="32" height="30">
                   <use xlink:href="images/sprite.svg#icon-cart"></use>
                 </svg>
                 <span class="sr-only">Открыть корзину</span>
@@ -172,8 +172,8 @@
                   <button class="cart__btn-clear focus" type="reset">
                     очистить корзину
                   </button>
-                  <button class="cart__btn-close focus" type="button">
-                    <svg class="cart__icon-close" width="24" height="24">
+                  <button class="btn-close btn-close--cart focus" type="button">
+                    <svg class="icon" width="24" height="24">
                       <use xlink:href="images/sprite.svg#close"></use>
                     </svg>
                   </button>
@@ -181,8 +181,8 @@
                 <ul class="cart__list">
                   <li class="cart__item">
                     <article class="card-product card-product--cart">
-                      <button class="cart__btn-close cart__btn-close--product focus" type="button">
-                        <svg class="cart__icon-close" width="12" height="12">
+                      <button class="btn-close focus" type="button">
+                        <svg class="icon" width="12" height="12">
                           <use xlink:href="images/sprite.svg#close"></use>
                         </svg>
                       </button>
@@ -205,13 +205,13 @@
                         <div class="quantity quantity--cart">
                           <button class="quantity__btn focus quantity__btn--minus" type="button">
                             <span class="sr-only">Уменьшить количество на одну единицу</span>
-                            <svg class="quantity__icon">
+                            <svg class="quantity__icon" width="16" height="16">
                               <use xlink:href="images/sprite.svg#minus"></use>
                             </svg>
                           </button>
                           <input class="quantity__count focus" type="number" min="0" max="99" value="0" readonly>
                           <button class="quantity__btn focus quantity__btn--plus" type="button">
-                            <svg class="quantity__icon">
+                            <svg class="quantity__icon" width="16" height="16">
                               <use xlink:href="images/sprite.svg#plus"></use>
                             </svg>
                             <span class="sr-only">Увеличить количество на одну единицу</span>
@@ -230,8 +230,8 @@
                   </li>
                   <li class="cart__item">
                     <article class="card-product card-product--cart">
-                      <button class="cart__btn-close cart__btn-close--product focus" type="button">
-                        <svg class="cart__icon-close" width="12" height="12">
+                      <button class="btn-close focus" type="button">
+                        <svg class="icon" width="12" height="12">
                           <use xlink:href="images/sprite.svg#close"></use>
                         </svg>
                       </button>
@@ -305,50 +305,50 @@
     <h1 class="sr-only">Интернет-магазин ФрешОк</h1>
     <section class="hero">
       <h2 class="sr-only">Акции магазина</h2>
-      <div class="banner">
-        <div class="banner__item" style="background-image: url('images/slider/carrot.jpg');">
+      <div class="banner-top">
+        <div class="banner-top__item" style="background-image: url('images/slider/carrot.jpg');">
           <div class="container">
-            <div class="banner__inner">
-              <div class="banner__content">
-                <h3 class="banner__title">
+            <div class="banner-top__inner">
+              <div class="banner-top__content">
+                <h3 class="banner-top__title">
                   свежачок вам в хату
-                  <span class="banner__subtitle">Скидка -50%</span>
+                  <span class="banner-top__subtitle">Скидка -50%</span>
                 </h3>
-                <p class="banner__text">
+                <p class="banner-top__text">
                   Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
                 </p>
-                <a class="banner__link btn focus" href="#">Купить сейчас</a>
+                <a class="banner-top__link btn focus" href="#">Купить сейчас</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="banner__item" style="background-image: url('images/slider/tomato.jpg');">
+        <div class="banner-top__item" style="background-image: url('images/slider/tomato.jpg');">
           <div class="container">
-            <div class="banner__inner">
-              <div class="banner__content">
-                <h3 class="banner__title">
+            <div class="banner-top__inner">
+              <div class="banner-top__content">
+                <h3 class="banner-top__title">
                   накрути себе томатов
-                  <span class="banner__subtitle">акция: 3 кг по цене 1</span>
+                  <span class="banner-top__subtitle">акция: 3 кг по цене 1</span>
                 </h3>
-                <p class="banner__text">
+                <p class="banner-top__text">
                   Только с 12 по 15 июля скидка на домашние помидорчики
                 </p>
-                <a class="banner__link btn focus" href="#">Купить сейчас</a>
+                <a class="banner-top__link btn focus" href="#">Купить сейчас</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="banner__item" style="background-image: url('images/slider/greenery.jpg');">
+        <div class="banner-top__item" style="background-image: url('images/slider/greenery.jpg');">
           <div class="container">
-            <div class="banner__inner">
-              <div class="banner__content">
-                <h3 class="banner__title">
+            <div class="banner-top__inner">
+              <div class="banner-top__content">
+                <h3 class="banner-top__title">
                   Пусть остальные позеленеют от зависти
-                  <span class="banner__subtitle">Распродажа зелени</span>
+                  <span class="banner-top__subtitle">Распродажа зелени</span>
                 </h3>
-                <a class="banner__link btn focus" href="#">Купить сейчас</a>
+                <a class="banner-top__link btn focus" href="#">Купить сейчас</a>
               </div>
             </div>
           </div>
@@ -429,8 +429,8 @@
                     -50%
                   </span>
                 </div>
-                <button class="card-product__btn-favorite focus" type="button">
-                  <svg class="card-product__icon-favorite">
+                <button class="btn-square btn-square--favorite focus" type="button">
+                  <svg class="icon" width="32" height="29">
                     <use xlink:href="images/sprite.svg#favorite"></use>
                   </svg>
                 </button>
@@ -472,8 +472,8 @@
                     </button>
                   </div>
 
-                  <button class=" card-product__btn-cart focus" type="button">
-                    <svg class="card-product__icon-cart">
+                  <button class="btn-square btn-square--cart focus" type="button">
+                    <svg class="icon" width="16" height="16">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
                     <span class="sr-only">Добавить в корзину</span>
@@ -483,8 +483,8 @@
             </li>
             <li class="top-products__item mix fruit">
               <article class="card-product">
-                <button class="card-product__btn-favorite focus" type="button">
-                  <svg class="card-product__icon-favorite">
+                <button class="btn-square btn-square--favorite focus" type="button">
+                  <svg class="icon" width="32" height="29">
                     <use xlink:href="images/sprite.svg#favorite"></use>
                   </svg>
                 </button>
@@ -520,8 +520,8 @@
                     </button>
                   </div>
 
-                  <button class="card-product__btn-cart focus" type="button">
-                    <svg class="card-product__icon-cart">
+                  <button class="btn-square btn-square--cart focus" type="button">
+                    <svg class="icon" width="16" height="16">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
                     <span class="sr-only">Добавить в корзину</span>
@@ -536,8 +536,8 @@
                     хит
                   </span>
                 </div>
-                <button class="card-product__btn-favorite focus" type="button">
-                  <svg class="card-product__icon-favorite">
+                <button class="btn-square btn-square--favorite focus" type="button">
+                  <svg class="icon" width="32" height="29">
                     <use xlink:href="images/sprite.svg#favorite"></use>
                   </svg>
                 </button>
@@ -573,8 +573,8 @@
                     </button>
                   </div>
 
-                  <button class="card-product__btn-cart focus" type="button">
-                    <svg class="card-product__icon-cart">
+                  <button class="btn-square btn-square--cart focus" type="button">
+                    <svg class="icon" width="16" height="16">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
                     <span class="sr-only">Добавить в корзину</span>
@@ -584,8 +584,8 @@
             </li>
             <li class="top-products__item  mix grocery">
               <article class="card-product">
-                <button class="card-product__btn-favorite focus" type="button">
-                  <svg class="card-product__icon-favorite">
+                <button class="btn-square btn-square--favorite focus" type="button">
+                  <svg class="icon" width="32" height="29">
                     <use xlink:href="images/sprite.svg#favorite"></use>
                   </svg>
                 </button>
@@ -621,8 +621,8 @@
                     </button>
                   </div>
 
-                  <button class="card-product__btn-cart focus" type="button">
-                    <svg class="card-product__icon-cart">
+                  <button class="btn-square btn-square--cart focus" type="button">
+                    <svg class="icon" width="16" height="16">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
                     <span class="sr-only">Добавить в корзину</span>
@@ -637,8 +637,8 @@
                     хит
                   </span>
                 </div>
-                <button class="card-product__btn-favorite focus" type="button">
-                  <svg class="card-product__icon-favorite">
+                <button class="btn-square btn-square--favorite focus" type="button">
+                  <svg class="icon" width="32" height="29">
                     <use xlink:href="images/sprite.svg#favorite"></use>
                   </svg>
                 </button>
@@ -674,8 +674,8 @@
                     </button>
                   </div>
 
-                  <button class="card-product__btn-cart focus" type="button">
-                    <svg class="card-product__icon-cart">
+                  <button class="btn-square btn-square--cart focus" type="button">
+                    <svg class="icon" width="16" height="16">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
                     <span class="sr-only">Добавить в корзину</span>
@@ -690,8 +690,8 @@
                     -30%
                   </span>
                 </div>
-                <button class="card-product__btn-favorite focus" type="button">
-                  <svg class="card-product__icon-favorite">
+                <button class="btn-square btn-square--favorite focus" type="button">
+                  <svg class="icon" width="32" height="29">
                     <use xlink:href="images/sprite.svg#favorite"></use>
                   </svg>
                 </button>
@@ -733,8 +733,8 @@
                     </button>
                   </div>
 
-                  <button class="card-product__btn-cart focus" type="button">
-                    <svg class="card-product__icon-cart">
+                  <button class="btn-square btn-square--cart focus" type="button">
+                    <svg class="icon" width="16" height="16">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
                     <span class="sr-only">Добавить в корзину</span>
@@ -749,8 +749,8 @@
                     новинка
                   </span>
                 </div>
-                <button class="card-product__btn-favorite focus" type="button">
-                  <svg class="card-product__icon-favorite">
+                <button class="btn-square btn-square--favorite focus" type="button">
+                  <svg class="icon" width="32" height="29">
                     <use xlink:href="images/sprite.svg#favorite"></use>
                   </svg>
                 </button>
@@ -786,8 +786,8 @@
                     </button>
                   </div>
 
-                  <button class="card-product__btn-cart focus" type="button">
-                    <svg class="card-product__icon-cart">
+                  <button class="btn-square btn-square--cart focus" type="button">
+                    <svg class="icon" width="16" height="16">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
                     <span class="sr-only">Добавить в корзину</span>
@@ -802,8 +802,8 @@
                     новинка
                   </span>
                 </div>
-                <button class="card-product__btn-favorite focus" type="button">
-                  <svg class="card-product__icon-favorite">
+                <button class="btn-square btn-square--favorite focus" type="button">
+                  <svg class="icon" width="32" height="29">
                     <use xlink:href="images/sprite.svg#favorite"></use>
                   </svg>
                 </button>
@@ -839,8 +839,8 @@
                     </button>
                   </div>
 
-                  <button class="card-product__btn-cart focus" type="button">
-                    <svg class="card-product__icon-cart">
+                  <button class="btn-square btn-square--cart focus" type="button">
+                    <svg class="icon" width="16" height="16">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
                     <span class="sr-only">Добавить в корзину</span>
@@ -850,7 +850,7 @@
             </li>
           </ul>
         </div>
-        <a class="top-products__btn btn" href="#">Показать еще</a>
+        <a class="top-products__btn btn focus" href="#">Показать еще</a>
       </div>
     </section>
 
@@ -1325,7 +1325,7 @@
                   15
                 </span>
               </time>
-              <a class="news__link" href="#">
+              <a class="news__link focus" href="#">
                 <img class="news__img" src="images/news/fruits.jpg" alt="Клубника" width="410" height="240">
                 <h3 class="news__title">
                   Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!
@@ -1343,7 +1343,7 @@
                   07
                 </span>
               </time>
-              <a class="news__link" href="#">
+              <a class="news__link focus" href="#">
                 <img class="news__img" src="images/news/mango.jpg" alt="Манго" width="410" height="240">
                 <h3 class="news__title">
                   Шикарнейший выбор манго в нашем онлайн-маркете
@@ -1361,7 +1361,7 @@
                   20
                 </span>
               </time>
-              <a class="news__link" href="#">
+              <a class="news__link focus" href="#">
                 <img class="news__img" src="images/news/papaya.jpg" alt="Папайя" width="410" height="240">
                 <h3 class="news__title">
                   Всё, что вы хотели знать о папайя

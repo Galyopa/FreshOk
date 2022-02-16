@@ -40,38 +40,22 @@
     &:active {
       border-bottom: 3px solid $green100;
     }
-   }
+  }
 
-  &__btn-close {
-    position: absolute;
-    top: 33px;
-    right: 26px;
-    width: 40px;
-    height: 40px;
-    fill: $dark-800;
-    border-radius: 3px;
+  &__price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    color: $dark-500;
+  }
 
-    &:hover {
-      background-color: $green100;
-      fill: $green900;
-    }
-
-    &:active {
-      background-color: rgba($color: $silver-600, $alpha: 0.3);
-    }
-
-    &--product {
-      top: 12px;
-      right: 12px;
-      width: 24px;
-      height: 24px;
-      fill: $silver-600;
-    }
+  &__currency {
+    font-size: 18px;
+    margin-left: -5px;
   }
 
   &__icon-close {
     display: block;
-    margin: auto auto;
   }
 
   &__list {

@@ -16,10 +16,6 @@ body {
   background-color: $white;
 }
 
-svg:not([class="rate__icon"]) {
-  fill: inherit;
-}
-
 button,
 input {
   letter-spacing: inherit;
@@ -78,6 +74,39 @@ button {
   }
 }
 
+.btn-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  fill: $silver-600;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: $green100;
+    fill: $green900;
+  }
+
+  &:active {
+    background-color: rgba($color: $silver-600, $alpha: 0.3);
+  }
+
+  &--cart {
+    top: 25px;
+    right: 26px;
+    width: 40px;
+    height: 40px;
+    fill: $dark-800;
+  }
+}
+
+.icon {
+  display: block;
+  margin: auto auto;
+  fill: inherit;
+}
+
 .section {
   text-align: center;
   padding: 72px 0;
@@ -91,25 +120,19 @@ button {
   color: $dark-900;
   text-transform: uppercase;
 }
+
+@import 'global-components/btn-square';
 @import 'global-components/cart';
-
-.cart__price {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1;
-  color: $dark-500;
-}
-
-.cart__currency {
-  font-size: 18px;
-  margin-left: -5px;
-}
+@import 'global-components/nav';
+@import 'global-components/logo';
+@import 'global-components/catalog';
+@import 'global-components/form';
+@import 'global-components/user-nav';
 @import 'global-components/filter-products';
 @import 'global-components/card-product';
 @import 'global-components/badge';
 @import 'global-components/price';
 @import 'global-components/quantity';
-
 
 .rate {
   display: flex;
@@ -117,4 +140,28 @@ button {
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
+}
+
+@import 'global-components/footer';
+@import 'global-components/address';
+@import 'global-components/social';
+
+.copyright {
+  text-transform: uppercase;
+}
+
+.payments {
+  &__item {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 49px;
+    height: 29px;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+      width: 93px;
+    }
+  }
 }

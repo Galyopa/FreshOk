@@ -3,84 +3,10 @@
 @import 'libs';
 @import 'vars';
 @import 'global';
-@import 'components/nav';
-@import 'components/logo';
-@import 'components/catalog';
-@import 'components/form';
-@import 'components/user-nav';
-@import 'components/banner';
+@import 'components/banner-top';
 @import 'components/advantage';
 @import 'components/top-products';
 @import 'components/promo-products';
 @import 'components/banner-bottom';
 @import 'components/sponsors';
 @import 'components/news';
-@import 'components/footer';
-
-.address {
-	&__item {
-		margin-bottom: 20px;
-	}
-
-	&__link {
-		border-radius: 3px;
-
-		&:hover {
-			opacity: 0.7
-		}
-
-		&:active {
-			color: $green200;
-		}
-	}
-}
-
-.social {
-
-	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		max-width: 220px;
-	}
-
-	&__item:not(:last-child) {
-		margin: 0 12px 20px 0;
-	}
-
-	&__link {
-		display: inline-block;
-		width: 32px;
-		height: 32px;
-		border-radius: 3px;
-		fill: $white;
-
-		&:hover {
-			opacity: 0.7
-		}
-
-		&:active {
-			fill: $green200;
-		}
-	}
-}
-
-.copyright {
-	text-transform: uppercase;
-}
-
-.payments {
-	&__item {
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		width: 49px;
-		height: 29px;
-
-		&:not(:last-child) {
-			margin-right: 25px;
-			width: 93px;
-		}
-	}
-
-}

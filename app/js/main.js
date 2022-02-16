@@ -1,7 +1,7 @@
 $(function () {
-  $('.banner').slick({
-    prevArrow: '<button type="button" class="banner__btn banner__btn--prev"> <span class="sr-only">Предыдущий слайд</span> <svg class="banner__svg"><use xlink:href="images/sprite.svg#slick-prev"></use></svg></button>',
-    nextArrow: '<button type="button" class="banner__btn banner__btn--next"> <span class="sr-only">Следующий слайд</span> <svg class="banner__svg"><use xlink:href="images/sprite.svg#slick-next"></use></svg></button>',
+  $('.banner-top').slick({
+    prevArrow: '<button type="button" class="banner-top__btn banner-top__btn--prev"> <span class="sr-only">Предыдущий слайд</span> <svg class="btn-square__icon" width="19" height="32"><use xlink:href="images/sprite.svg#slick-prev"></use></svg></button>',
+    nextArrow: '<button type="button" class="banner-top__btn banner-top__btn--next"> <span class="sr-only">Следующий слайд</span> <svg class="btn-square__icon" width="19" height="32"><use xlink:href="images/sprite.svg#slick-next"></use></svg></button>',
     autoplay: true,
     autoplaySpeed: 3000,
   });
@@ -18,11 +18,11 @@ $(function () {
     $(this).toggleClass('active');
   });
 
-  $('.user-nav__btn--cart').on('click', function () {
+  $('#btn-cart').on('click', function () {
     $('.cart').addClass('active');
   });
 
-  $('.cart__btn-close').on('click', function () {
+  $('.btn-close--cart').on('click', function () {
     $('.cart').removeClass('active');
   });
 
