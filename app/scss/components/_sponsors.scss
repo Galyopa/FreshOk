@@ -1,13 +1,16 @@
 .sponsors {
 	padding-top: 72px;
 
+
 	&__list {
 		margin: 0 55px;
 	}
 
 	&__link {
-		display: block;
+		display: inline-block;
 		opacity: 0.5;
+		margin-top: 3px;
+
 
 		&:hover {
 			opacity: 1;
