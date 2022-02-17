@@ -9,9 +9,18 @@ const browserSync = require('browser-sync').create();
 const svgSprite = require('gulp-svg-sprite');
 const cheerio = require('gulp-cheerio');
 const svgmin = require('gulp-svgmin');
+const nunjucksRender = require('gulp-nunjucks-render');
+const rename = require('gulp-rename');
 
 function cleanDist() {
   return del('dist')
+}
+
+function nunjucks() {
+  return src('app/*.njk')
+  .pipe(nunjucksRender())
+  .pipe(dest('app'))
+  .pipe(browserSync.stream())
 }
 
 function svgSprites() {
@@ -52,9 +61,12 @@ function browsersync() {
 }
 
 function styles() {
-  return src('app/scss/style.scss') // берет фаил 
+  return src('app/scss/*.scss') // берет фаил 
     .pipe(scss({ outputStyle: 'compressed' }))  // стиль преобразовния
-    .pipe(concat('style.min.css')) //переименовывавет фаил
+    // .pipe(concat()) //переименовывавет фаил
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions'],
       grid: true
@@ -104,6 +116,7 @@ function build() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
+  watch(['app/*.njk'], nunjucks);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
   watch(['app/images/icons/*.svg'], svgSprites);
@@ -116,6 +129,7 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.svgSprites = svgSprites;
+exports.nunjucks = nunjucks;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(svgSprites, styles, scripts, browsersync, watching);
+exports.default = parallel(nunjucks, svgSprites, styles, scripts, browsersync, watching);
