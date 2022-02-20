@@ -26,16 +26,6 @@
     position: relative;
     margin-bottom: 18px;
 
-    &--promo {
-      margin-bottom: 0;
-    }
-
-    &--cart{
-      display: inline-block;
-      margin-bottom: 0;
-
-    }
-
     &:hover {
       &::before {
         content: "";
@@ -61,6 +51,27 @@
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &--promo {
+      margin-bottom: 0;
+
+      &:hover {
+        &::before {
+          top: 27%;
+        }
+      }
+    }
+
+    &--cart {
+      display: inline-block;
+      margin-bottom: 0;
+
+      &:hover {
+        &::before {
+          top: 15%;
+        }
       }
     }
   }

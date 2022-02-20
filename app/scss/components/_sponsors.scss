@@ -7,9 +7,12 @@
 	}
 
 	&__link {
-		display: inline-block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		opacity: 0.5;
 		margin-top: 3px;
+		min-height: 59px;
 
 
 		&:hover {
